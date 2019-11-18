@@ -587,7 +587,7 @@ output_data_paths=os.listdir(output_data_path)
 output_data_paths.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
 
 ccount=2
-file_count=1
+file_count=0
 
 for odf in range(len(output_data_paths)):
     for jsf in range(len(json_paths)):
