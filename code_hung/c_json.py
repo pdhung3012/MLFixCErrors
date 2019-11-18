@@ -160,8 +160,8 @@ def from_json(ast_json):
 #------------------------------------------------------------------------------
 if __name__ == "__main__":
            # folder_path="/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/train_program_set/"
-           folder_path = "/Users/hungphan/git/MLFixCErrors/databases/uninitializedCodes_2/"
-           folder_output = "/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/output_uninit/file_{}.json"
+           folder_path = "/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/train_program_set/"
+           folder_output = "/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/output_data_files/file_{}.json"
 
            files=os.listdir(folder_path)
            files = [i for i in files if i.endswith('.c')]

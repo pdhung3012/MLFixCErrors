@@ -170,13 +170,14 @@ if __name__ == "__main__":
            count=0
            # new_folder_path='/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/output_uninit/'
            # folder_exec="/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/output_exec_2/file_{}.c"
-           new_folder_path = '/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/output_uninit/'
-           folder_exec = "/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/output_exec_2/file_{}.c"
+           new_folder_path = '/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/output_json_files/'
+           folder_exec = "/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/output_exec/file_{}.c"
            new_files=os.listdir(new_folder_path)
-           new_files = [i for i in new_files if i.endswith('.c')]
+           # new_files = [i for i in new_files if i.endswith('.c')]
            new_files.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
            i=1
            for new_file in range(len(new_files)):
+               print(new_file)
                generator = c_generator.CGenerator()
                cl=open(new_folder_path + new_files[new_file],'r')
                # print(eval(cl.read()))

@@ -141,7 +141,7 @@ plt.xlabel('epoch')
 plt.legend(['train'], loc='upper left')
 plt.show()
 
-plt.plot(test_history.history['acc'])
+plt.plot(test_history.history['accuracy'])
 #plt.plot(history.history['val_acc'])
 plt.title('model accuracy')
 plt.ylabel('accuracy')
@@ -232,7 +232,7 @@ bcount=2
 ptmap={}
 nf=set()
 
-file2_path='data_files/'
+file2_path='/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/data_files/'
 for file in range(len(file1_paths)):
        lines=open(file2_path+file1_paths[file],'r').readlines()
        for i in range(len(lines)):
@@ -496,7 +496,7 @@ count=0
 bcount=1
 js=2
 bf=set()
-temp_file_path="data_files/"
+temp_file_path="/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/data_files/"
 for file in range(len(file1_paths)):
       f=open(temp_file_path+file1_paths[file],'r+')    
       lines=f.readlines()
@@ -519,7 +519,7 @@ for file in range(len(file1_paths)):
                         if 'ArrayRef' in lines[i-1]: 
                             js=bcount
                             with open('array_json_file.json','r') as fl:
-                              with open('jsonfiles/file_{}.json'.format(js),'w') as bl:
+                              with open('/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/jsonfiles/file_{}.json'.format(js),'w') as bl:
                                 for line in fl:
                                     line=line.strip()
                                     line=line.replace('"',"'")
@@ -540,7 +540,7 @@ for file in range(len(file1_paths)):
                         else:
                             js=bcount
                             with open('json_file.json','r') as fl:
-                                with open('jsonfiles/file_{}.json'.format(js),'w') as bl:
+                                with open('/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/jsonfiles/file_{}.json'.format(js),'w') as bl:
                                     for line in fl:
                                         line=line.strip()
                                         line=line.replace('"',"'")
