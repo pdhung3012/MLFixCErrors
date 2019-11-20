@@ -128,14 +128,14 @@ for file in range(len(file1_paths)):
                    headers_file.write("%s \n" %funcs)
            if lines[i][0]=='ID' and lines[i][1] not in stdio_funcs and lines[i][1] not in string_funcs and lines[i][1] not in stdlib_funcs and lines[i][1] not in ctype_funcs and lines[i][1] not in math_funcs and lines[i][1] not in setjmp_funcs and lines[i][1] not in signal_funcs and lines[i][1] not in locale_funcs:
                input_file.write("%s" %copy_lines[i])
-print(terminal_map)
+# print(terminal_map)
 input_file.close()
 
 s=' Decl:literal_alpha TypeDecl:literal_alpha IdentifierType:type'
 with open('inputs.txt','w') as f:
    with open('input.txt','r') as out:
      for line in out:
-        print(line.rstrip('\n').replace(" ","") + " " + s + '\n')
+        # print(line.rstrip('\n').replace(" ","") + " " + s + '\n')
         f.write(line.rstrip('\n').replace(" ","") + " " + s + '\n')
 f.close()
 
@@ -271,7 +271,7 @@ with open('dictions.pkl','wb') as pick:
 from pickle import load
 with open('dictions.pkl','rb') as pi:
     diction_list_copy,file1_paths,diction_list=load(pi)
-    print(str(diction_list))
+    # print(str(diction_list))
 
 
 

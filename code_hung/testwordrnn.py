@@ -65,8 +65,6 @@ for i in range(length, len(raw_text)):
 	seq = raw_text[i-length:i+1]
 	# store
 	sequences.append(seq)
-print('Total Sequences: %d' % len(sequences))
-
 #print(sequences)
 # integer encode sequences of characters
 mapping = dict()
@@ -75,33 +73,43 @@ for i in range(len(raw_text)):
     if raw_text[i] not in mapping.values():
         mapping[count]=raw_text[i]
         count=count+1
-print(mapping)
+# print(mapping)
 inverse_mapping={}
 for key,val in mapping.items():
+     # print(str(key)+'---'+str(val))
      inverse_mapping[val]=key
-     
+
+# print('Total Sequences: %d %s' % (len(sequences), sequences))
 sequences_encode = list()
 for i in range(len(sequences)):
       encoded_seq=[inverse_mapping[sequences[i][j]] for j in range(len(sequences[i]))]
       sequences_encode.append(encoded_seq)
 
-#print(sequences_encode)
+# print(sequences_encode)
 # vocabulary size
 vocab_size = len(mapping)
-#print('Vocabulary Size: %d' % vocab_size)
+# print('Vocabulary Size: ' + str(vocab_size))
 
 # separate into input and output
 sequences_encode = array(sequences_encode)
-print(sequences_encode)
+# print("encode "+str(sequences_encode))
 X, y = sequences_encode[:,:-1], sequences_encode[:,-1]
 #print(X)
 #print(y)
 sequences_encode = [to_categorical(x, num_classes=vocab_size) for x in X]
 X = array(sequences_encode)
 y = to_categorical(y, num_classes=vocab_size)
-print(X)
-#print(y)
-print(X.shape[1],X.shape[2])
+# print(X)
+
+
+# print("sequence: "+str(sequences))
+# print("x: "+str(len(X))+" "+str(X[0]))
+# print("x: "+str(len(X))+" "+str(X[4]))
+# print("y: "+str(len(y))+" "+str(y[0]))
+# print("y: "+str(len(y))+" "+str(y[4]))
+# print("y: "+str(len(y))+" "+str(y[1]))
+# print("y: "+str(len(y))+" "+str(y[2]))
+# print(X.shape[1],X.shape[2])
 # define model
 model = Sequential()
 #model.add(Embedding(input_dim=vocab_size,output_dim=512))
@@ -115,52 +123,59 @@ model.add(Dense(vocab_size,activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer=RMSprop(lr=0.01), metrics=['accuracy'])
 # fit model
 X_train, X_valid, Y_train, Y_valid = train_test_split(X,y, test_size = 0.20, random_state = 36)
+# print(X_train)
+# print(len(X_train))
+# print(len(X_train[0]))
+# print(len(X_train[1]))
+# input("Enter your name : ")
+
+
 history=model.fit(X_train, Y_train, epochs=5,batch_size=3, verbose=2)
 test_history=model.fit(X_valid,Y_valid,epochs=2,batch_size=3,verbose=2)
 # save the model to file
 model.save('model.h5')
 # save the mapping
 dump(mapping, open('mapping.pkl', 'wb'))
-print(len(inverse_mapping))
+# print(len(inverse_mapping))
 dump(inverse_mapping, open('inverse_mapping.pkl','wb'))
 
-# summarize history for accuracy
-plt.plot(history.history['accuracy'])
-#plt.plot(history.history['val_acc'])
-plt.title('model accuracy')
-plt.ylabel('accuracy')
-plt.xlabel('epoch')
-plt.legend(['train'], loc='upper left')
-plt.show()
-# summarize history for loss
-plt.plot(history.history['loss'])
-#plt.plot(history.history['val_loss'])
-plt.title('model loss')
-plt.ylabel('loss')
-plt.xlabel('epoch')
-plt.legend(['train'], loc='upper left')
-plt.show()
-
-plt.plot(test_history.history['accuracy'])
-#plt.plot(history.history['val_acc'])
-plt.title('model accuracy')
-plt.ylabel('accuracy')
-plt.xlabel('epoch')
-plt.legend(['test'], loc='upper left')
-plt.show()
-# summarize history for loss
-plt.plot(test_history.history['loss'])
-#plt.plot(history.history['val_loss'])
-plt.title('model loss')
-plt.ylabel('loss')
-plt.xlabel('epoch')
-plt.legend(['test'], loc='upper left')
-plt.show()
+# # summarize history for accuracy
+# plt.plot(history.history['accuracy'])
+# #plt.plot(history.history['val_acc'])
+# plt.title('model accuracy')
+# plt.ylabel('accuracy')
+# plt.xlabel('epoch')
+# plt.legend(['train'], loc='upper left')
+# plt.show()
+# # summarize history for loss
+# plt.plot(history.history['loss'])
+# #plt.plot(history.history['val_loss'])
+# plt.title('model loss')
+# plt.ylabel('loss')
+# plt.xlabel('epoch')
+# plt.legend(['train'], loc='upper left')
+# plt.show()
+#
+# plt.plot(test_history.history['accuracy'])
+# #plt.plot(history.history['val_acc'])
+# plt.title('model accuracy')
+# plt.ylabel('accuracy')
+# plt.xlabel('epoch')
+# plt.legend(['test'], loc='upper left')
+# plt.show()
+# # summarize history for loss
+# plt.plot(test_history.history['loss'])
+# #plt.plot(history.history['val_loss'])
+# plt.title('model loss')
+# plt.ylabel('loss')
+# plt.xlabel('epoch')
+# plt.legend(['test'], loc='upper left')
+# plt.show()
 
 # generate a sequence of characters with a language model
 def generate_seq(model, mapping,inverse_mapping, seq_length, seed_text, n_words):
   in_text = seed_text.split()
-  #print(in_text)
+  # print(in_text)
 	# generate a fixed number of characters
   for _ in range(n_words):
 		# encode the characters as integers
@@ -171,7 +186,6 @@ def generate_seq(model, mapping,inverse_mapping, seq_length, seed_text, n_words)
     encoded = to_categorical([encoded], num_classes=len(mapping))
     #print(encoded)
     yhat = model.predict_classes(encoded, verbose=0)
-    #print(yhat)
     out_word = ''
     for index, word in mapping.items():
      	   if index == yhat:
@@ -179,6 +193,7 @@ def generate_seq(model, mapping,inverse_mapping, seq_length, seed_text, n_words)
               #print(out_word)
               break
     in_text.append(out_word)
+    # print("out class " + str(yhat) + " input " + str(encoded)+" out_word "+str(out_word)+ " seed text " + str(in_text))
   return in_text
 
 # load the model
@@ -187,10 +202,15 @@ model = load_model('model.h5')
 mapping = load(open('mapping.pkl', 'rb'))
 inverse_mapping = load(open('inverse_mapping.pkl','rb'))
 
+# print(raw_text)
+# loop over all id, predict a declaration
 predictions=[]
 for i in range(len(raw_text)):
+
     if i%4==0:
+        print(str(raw_text[i]))
         pred=generate_seq(model, mapping, inverse_mapping, 1, raw_text[i], 3)
+        # print("Here is prediction "+str(raw_text[i])+" "+str(pred))
         predictions.append(pred)
 #print(predictions)    
 #print(generate_seq(model, mapping, inverse_mapping,1, 'scanf', 2))
@@ -243,13 +263,18 @@ for file in range(len(file1_paths)):
                    pp=diction_list_copy[count]['100222222'] | diction_list_copy[count]['100']
                  except KeyError as e:
                      pp=diction_list_copy[count]['100222222']
-                 if predictions[j][0]==lines[i][0]+":"+lines[i][1].strip() and 'Decl: ' + predictions[j][0].split(':')[1] not in pp:  
-                  print(pp)
-                  if predictions[j][0] not in nf: 
+                 # print("prediction output: "+str(j)+" " + str(predictions[j][0].split(':')[1]))
+                 # print("prediction details: " + str(j) + " " + str(predictions[j][0]))
+                 if predictions[j][0]==lines[i][0]+":"+lines[i][1].strip() and 'Decl: ' + predictions[j][0].split(':')[1] not in pp:
+                  # print(pp)
+                  print("pp: " + str(pp))
+                  if predictions[j][0] not in nf:
                    nf.add(predictions[j][0])
-                   print(nf)
+                   # print(nf)
                    bcount=pcount
-                   print(bcount)
+                   print(file1_paths[file])
+                   print("possible not found: "+str(len(predictions)))
+                   # print("nf: " + str(nf))
                    next_line=lines[i+1].split(':')
                    if next_line[0]=='Constant':
                        if "." in next_line[1]:
@@ -489,12 +514,12 @@ for key,val in ptmap.items():
       ptmap[key]=re.sub('\[','',ptmap[key])
       ptmap[key]=re.sub('\]','',ptmap[key])
       ptmap[key]=re.sub(' ','',ptmap[key])
-print(ptmap)
+# print(ptmap)
      
 new_flag=0
 count=0
-bcount=1
-js=2
+bcount=2
+js=0
 bf=set()
 temp_file_path="/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/data_files/"
 for file in range(len(file1_paths)):
@@ -503,9 +528,9 @@ for file in range(len(file1_paths)):
       for i in range(len(lines)):
            lines[i]=lines[i].split(':')
            if 'ID'==lines[i][0] and lines[i][1].strip() not in stdio_funcs and lines[i][1].strip() not in string_funcs and lines[i][1].strip() not in stdlib_funcs and lines[i][1].strip() not in ctype_funcs and lines[i][1].strip() not in math_funcs and lines[i][1].strip() not in setjmp_funcs and lines[i][1].strip() not in signal_funcs and lines[i][1].strip() not in locale_funcs:
-                for j in range(len(predictions)): 
-                 #print(lines[i][1].strip())
-                  #print(predictions[j][0])
+                # print(lines[i][1]+' '+str(predictions))
+                for j in range(len(predictions)):
+                  # print("prediction aaa "+predictions[j][1])
                   try:   
                      pp=diction_list_copy[count]['100222222'] | diction_list_copy[count]['100']
                   except KeyError as e:
@@ -518,6 +543,7 @@ for file in range(len(file1_paths)):
                         #print(final_type)
                         if 'ArrayRef' in lines[i-1]: 
                             js=bcount
+                            print('arrayref to json ' + str(js))
                             with open('array_json_file.json','r') as fl:
                               with open('/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/jsonfiles/file_{}.json'.format(js),'w') as bl:
                                 for line in fl:
@@ -539,6 +565,7 @@ for file in range(len(file1_paths)):
                             fl.close()   
                         else:
                             js=bcount
+                            print('go to json '+str(js))
                             with open('json_file.json','r') as fl:
                                 with open('/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/jsonfiles/file_{}.json'.format(js),'w') as bl:
                                     for line in fl:
@@ -586,8 +613,8 @@ fop_output_json_files='/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/o
 output_data_paths=os.listdir(output_data_path)
 output_data_paths.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
 
-ccount=2
-file_count=0
+ccount=1
+file_count=1
 
 for odf in range(len(output_data_paths)):
     for jsf in range(len(json_paths)):

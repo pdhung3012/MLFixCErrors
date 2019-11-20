@@ -6,6 +6,3 @@ ID:s  Decl:literal_alpha TypeDecl:literal_alpha IdentifierType:type
 ID:j  Decl:literal_alpha TypeDecl:literal_alpha IdentifierType:type
 ID:count  Decl:literal_alpha TypeDecl:literal_alpha IdentifierType:type
 ID:x  Decl:literal_alpha TypeDecl:literal_alpha IdentifierType:type
-ID:c  Decl:literal_alpha TypeDecl:literal_alpha IdentifierType:type
-ID:b  Decl:literal_alpha TypeDecl:literal_alpha IdentifierType:type
-ID:d  Decl:literal_alpha TypeDecl:literal_alpha IdentifierType:type

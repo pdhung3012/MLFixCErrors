@@ -175,15 +175,16 @@ if __name__ == "__main__":
            new_files=os.listdir(new_folder_path)
            # new_files = [i for i in new_files if i.endswith('.c')]
            new_files.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
-           i=1
+           i=0
            for new_file in range(len(new_files)):
-               print(new_file)
+               # print(new_file)
+               i = i + 1
                generator = c_generator.CGenerator()
                cl=open(new_folder_path + new_files[new_file],'r')
                # print(eval(cl.read()))
                temp_json=json.dumps(eval(cl.read()))
                ast_json=from_json(temp_json)
-               print(ast_json)
+               # print(ast_json)
                original_stdout= sys.stdout
                sys.stdout = open(folder_exec.format(i),"w")
                out=generator.visit(ast_json)
@@ -202,8 +203,8 @@ if __name__ == "__main__":
                print(out)
                sys.stdout.close()
                sys.stdout= original_stdout
-               i=i+1
-               #print(i)
+
+               # print(i)
            '''    
            check_path='output_exec/'
            check_files=os.listdir(check_path)
