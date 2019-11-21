@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Apr  3 16:41:35 2019
+Created on November 21, 2019
 
-@author: Venkatesh T Mohan
+@author: Hung Phan
 """
 
 
@@ -50,7 +50,7 @@ numeric_int_count=1000
 numeric_float_count=3000
 int_val=0
 float_val=0.0
-file1_path="/Users/hungphan/git/MLFixCErrors/fixUndeclaredVariables/data_files/"
+file1_path="/Users/hungphan/git/MLFixCErrors/testUninitVars/data_files/"
 file1_paths= os.listdir(file1_path)
 #print(file1_paths)
 file1_paths.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
