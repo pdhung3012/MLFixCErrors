@@ -1,0 +1,86 @@
+FileAST
+FuncDef:
+Decl: sum_divisor
+FuncDecl:
+ParamList:
+Decl: num1
+TypeDecl: num1
+IdentifierType: ['int']
+TypeDecl: sum_divisor
+IdentifierType: ['float']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['float']
+Constant: 0.0
+Decl: sum1
+TypeDecl: sum1
+IdentifierType: ['float']
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <
+ID: i
+BinaryOp: +
+BinaryOp: /
+ID: num1
+Constant: 2
+Constant: 1
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: ==
+BinaryOp: %
+ID: num1
+ID: i
+Constant: 0
+Assignment: =
+ID: sum
+BinaryOp: +
+ID: sum1
+ID: i
+Return:
+ID: sum1
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: num
+TypeDecl: num
+IdentifierType: ['int']
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['float']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d "
+UnaryOp: &
+ID: num
+Assignment: =
+ID: sum
+FuncCall:
+ID: sum_divisor
+ExprList:
+ID: num
+If:
+BinaryOp: ==
+ID: sum
+ID: num
+FuncCall:
+ID: printf
+ExprList:
+Constant: "YES"
+FuncCall:
+ID: printf
+ExprList:
+Constant: "NO"
+Return:
+Constant: 0

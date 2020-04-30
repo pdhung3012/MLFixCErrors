@@ -1,0 +1,229 @@
+FileAST
+Decl: calc
+FuncDecl:
+ParamList:
+Decl: c
+TypeDecl: c
+IdentifierType: ['double']
+Decl: d
+TypeDecl: d
+IdentifierType: ['double']
+Decl: s
+TypeDecl: s
+IdentifierType: ['long']
+TypeDecl: calc
+IdentifierType: ['double']
+Decl: f
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+TypeDecl: f
+IdentifierType: ['double']
+Decl: g
+FuncDecl:
+ParamList:
+Decl: y
+TypeDecl: y
+IdentifierType: ['double']
+TypeDecl: g
+IdentifierType: ['double']
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: area
+TypeDecl: area
+IdentifierType: ['double']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf"
+UnaryOp: &
+ID: a
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf"
+UnaryOp: &
+ID: b
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Assignment: =
+ID: area
+FuncCall:
+ID: calc
+ExprList:
+ID: a
+ID: b
+ID: n
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.4lf"
+ID: area
+Return:
+Constant: 0
+FuncDef:
+Decl: f
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+TypeDecl: f
+IdentifierType: ['double']
+Compound:
+Decl: v
+TypeDecl: v
+IdentifierType: ['double']
+Decl: u
+TypeDecl: u
+IdentifierType: ['double']
+BinaryOp: *
+BinaryOp: *
+BinaryOp: *
+UnaryOp: -
+Constant: 1
+ID: x
+ID: x
+ID: x
+Return:
+ID: u
+FuncDef:
+Decl: g
+FuncDecl:
+ParamList:
+Decl: y
+TypeDecl: y
+IdentifierType: ['double']
+TypeDecl: g
+IdentifierType: ['double']
+Compound:
+Decl: v
+TypeDecl: v
+IdentifierType: ['double']
+Assignment: =
+ID: v
+BinaryOp: -
+BinaryOp: -
+BinaryOp: *
+BinaryOp: *
+BinaryOp: *
+Constant: 2
+ID: y
+ID: y
+ID: y
+BinaryOp: *
+ID: y
+ID: y
+BinaryOp: *
+Constant: 5
+ID: y
+Return:
+ID: v
+FuncDef:
+Decl: calc
+FuncDecl:
+ParamList:
+Decl: c
+TypeDecl: c
+IdentifierType: ['double']
+Decl: d
+TypeDecl: d
+IdentifierType: ['double']
+Decl: s
+TypeDecl: s
+IdentifierType: ['long']
+TypeDecl: calc
+IdentifierType: ['double']
+Compound:
+Decl: sub
+TypeDecl: sub
+IdentifierType: ['double']
+Decl: r
+TypeDecl: r
+IdentifierType: ['double']
+Decl: p
+TypeDecl: p
+IdentifierType: ['double']
+Decl: area
+TypeDecl: area
+IdentifierType: ['double']
+Constant: 0.0
+Assignment: =
+ID: sub
+BinaryOp: /
+BinaryOp: *
+Constant: 1.0
+BinaryOp: -
+ID: d
+ID: c
+ID: s
+Decl: i
+TypeDecl: i
+IdentifierType: ['long']
+Constant: 0.0
+While:
+BinaryOp: <
+ID: i
+ID: s
+Compound:
+Assignment: =
+ID: r
+FuncCall:
+ID: f
+ExprList:
+BinaryOp: +
+ID: c
+BinaryOp: *
+ID: i
+ID: sub
+Assignment: =
+ID: p
+FuncCall:
+ID: g
+ExprList:
+BinaryOp: +
+ID: c
+BinaryOp: *
+ID: i
+ID: sub
+If:
+BinaryOp: >
+ID: p
+ID: r
+Assignment: =
+ID: area
+BinaryOp: +
+ID: area
+BinaryOp: -
+ID: p
+ID: r
+Assignment: =
+ID: area
+BinaryOp: +
+ID: area
+BinaryOp: -
+ID: r
+ID: p
+UnaryOp: p++
+ID: i
+Return:
+ID: area

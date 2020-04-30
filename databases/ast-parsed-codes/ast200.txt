@@ -1,0 +1,89 @@
+FileAST
+Decl: check
+FuncDecl:
+ParamList:
+Decl: a
+TypeDecl: a
+IdentifierType: ['long']
+TypeDecl: check
+IdentifierType: ['int']
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: x
+TypeDecl: x
+IdentifierType: ['long']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld"
+UnaryOp: &
+ID: x
+If:
+FuncCall:
+ID: check
+ExprList:
+ID: x
+FuncCall:
+ID: printf
+ExprList:
+Constant: "YES"
+FuncCall:
+ID: printf
+ExprList:
+Constant: "NO"
+Return:
+Constant: 0
+FuncDef:
+Decl: check
+FuncDecl:
+ParamList:
+Decl: a
+TypeDecl: a
+IdentifierType: ['long']
+TypeDecl: check
+IdentifierType: ['int']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['long']
+Decl: s
+TypeDecl: s
+IdentifierType: ['long']
+Constant: 1
+Decl: n
+TypeDecl: n
+IdentifierType: ['long']
+For:
+Assignment: =
+ID: i
+Constant: 2
+BinaryOp: <=
+ID: i
+BinaryOp: /
+ID: n
+Constant: 2
+UnaryOp: p++
+ID: i
+If:
+BinaryOp: ==
+BinaryOp: %
+ID: a
+ID: i
+Constant: 0
+Assignment: =
+ID: s
+BinaryOp: +
+ID: s
+ID: i
+If:
+BinaryOp: ==
+ID: s
+ID: a
+Return:
+Constant: 1
+Return:
+Constant: 0

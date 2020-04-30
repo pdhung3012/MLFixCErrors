@@ -1,0 +1,183 @@
+FileAST
+FuncDef:
+Decl: f
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+TypeDecl: f
+IdentifierType: ['double']
+Compound:
+Decl: s
+TypeDecl: s
+IdentifierType: ['double']
+Assignment: =
+ID: s
+BinaryOp: +
+UnaryOp: -
+BinaryOp: *
+ID: x
+ID: x
+BinaryOp: *
+Constant: 3
+ID: x
+Return:
+ID: s
+FuncDef:
+Decl: g
+FuncDecl:
+ParamList:
+Decl: y
+TypeDecl: y
+IdentifierType: ['double']
+TypeDecl: g
+IdentifierType: ['double']
+Compound:
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Decl: t
+TypeDecl: t
+IdentifierType: ['double']
+Assignment: =
+ID: t
+BinaryOp: -
+BinaryOp: -
+BinaryOp: *
+BinaryOp: *
+BinaryOp: *
+Constant: 2
+ID: x
+ID: x
+ID: x
+BinaryOp: *
+ID: x
+ID: x
+BinaryOp: *
+Constant: 5
+ID: x
+Return:
+ID: t
+FuncDef:
+Decl: mod
+FuncDecl:
+ParamList:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+TypeDecl: mod
+IdentifierType: ['double']
+Compound:
+Decl: u
+TypeDecl: u
+IdentifierType: ['double']
+If:
+BinaryOp: >
+ID: a
+ID: b
+Assignment: =
+ID: u
+BinaryOp: -
+ID: a
+ID: b
+Assignment: =
+ID: u
+BinaryOp: -
+ID: b
+ID: a
+Return:
+ID: u
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+Decl: s
+TypeDecl: s
+IdentifierType: ['double']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Assignment: =
+ID: s
+Constant: 0
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf %lf "
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Decl: dx
+TypeDecl: dx
+IdentifierType: ['double']
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ID: x
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: dx
+ID: i
+Assignment: =
+ID: s
+BinaryOp: +
+ID: s
+BinaryOp: *
+FuncCall:
+ID: mod
+ExprList:
+FuncCall:
+ID: f
+ExprList:
+ID: x
+FuncCall:
+ID: g
+ExprList:
+ID: x
+ID: dx
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.4lf"
+ID: s
+Return:
+Constant: 0

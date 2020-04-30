@@ -1,0 +1,78 @@
+FileAST
+FuncDef:
+Decl: print_reverse
+FuncDecl:
+ParamList:
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: print_reverse
+IdentifierType: ['void']
+Compound:
+If:
+BinaryOp: ==
+ID: n
+Constant: 0
+Return:
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ArrayRef:
+ID: a
+BinaryOp: -
+ID: n
+Constant: 1
+FuncCall:
+ID: print_reverse
+ExprList:
+ID: a
+BinaryOp: -
+ID: n
+Constant: 1
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: a
+ID: i
+FuncCall:
+ID: print_reverse
+ExprList:
+ID: a
+ID: n
+Return:
+Constant: 0

@@ -1,0 +1,186 @@
+FileAST
+FuncDef:
+Decl: f
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+TypeDecl: f
+IdentifierType: ['double']
+Compound:
+Decl: y
+TypeDecl: y
+IdentifierType: ['double']
+Assignment: =
+ID: y
+BinaryOp: +
+UnaryOp: -
+FuncCall:
+ID: pow
+ExprList:
+ID: x
+Constant: 2
+BinaryOp: *
+Constant: 3
+ID: x
+Return:
+ID: y
+FuncDef:
+Decl: g
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+TypeDecl: g
+IdentifierType: ['double']
+Compound:
+Decl: y
+TypeDecl: y
+IdentifierType: ['double']
+Assignment: =
+ID: y
+BinaryOp: -
+BinaryOp: -
+BinaryOp: *
+Constant: 2
+FuncCall:
+ID: pow
+ExprList:
+ID: x
+Constant: 3
+FuncCall:
+ID: pow
+ExprList:
+ID: x
+Constant: 2
+BinaryOp: *
+Constant: 5
+ID: x
+Return:
+ID: y
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: z
+TypeDecl: z
+IdentifierType: ['int']
+Decl: a
+TypeDecl: a
+IdentifierType: ['float']
+Decl: b
+TypeDecl: b
+IdentifierType: ['float']
+Decl: x
+ArrayDecl:
+TypeDecl: x
+IdentifierType: ['double']
+Constant: 1000
+Decl: s
+TypeDecl: s
+IdentifierType: ['double']
+Constant: 0
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%f"
+UnaryOp: &
+ID: a
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%f"
+UnaryOp: &
+ID: b
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Assignment: =
+ArrayRef:
+ID: x
+Constant: 0
+ID: a
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: +
+ArrayRef:
+ID: x
+BinaryOp: -
+ID: i
+Constant: 1
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ID: s
+BinaryOp: +
+ID: s
+FuncCall:
+ID: abs
+ExprList:
+BinaryOp: -
+FuncCall:
+ID: f
+ExprList:
+ArrayRef:
+ID: x
+ID: i
+FuncCall:
+ID: g
+ExprList:
+ArrayRef:
+ID: x
+ID: i
+Assignment: =
+ID: s
+BinaryOp: /
+BinaryOp: *
+ID: s
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%fn"
+ID: z
+Return:
+Constant: 0

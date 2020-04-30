@@ -1,0 +1,176 @@
+FileAST
+FuncDef:
+Decl: f
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+TypeDecl: f
+IdentifierType: ['double']
+Compound:
+Return:
+BinaryOp: +
+BinaryOp: *
+UnaryOp: -
+ID: x
+ID: x
+BinaryOp: *
+Constant: 3
+ID: x
+FuncDef:
+Decl: g
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+TypeDecl: g
+IdentifierType: ['double']
+Compound:
+Return:
+BinaryOp: -
+BinaryOp: -
+BinaryOp: *
+BinaryOp: *
+BinaryOp: *
+Constant: 2
+ID: x
+ID: x
+ID: x
+BinaryOp: *
+ID: x
+ID: x
+BinaryOp: *
+Constant: 5
+ID: x
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: p
+TypeDecl: p
+IdentifierType: ['double']
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['double']
+Decl: t
+TypeDecl: t
+IdentifierType: ['double']
+Constant: 0
+Decl: n
+TypeDecl: n
+IdentifierType: ['long', 'int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf%lf%ld"
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+UnaryOp: &
+ID: n
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ID: p
+BinaryOp: +
+ID: a
+BinaryOp: /
+BinaryOp: *
+ID: i
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+If:
+BinaryOp: ||
+BinaryOp: <
+ID: p
+UnaryOp: -
+Constant: 2
+BinaryOp: &&
+BinaryOp: >
+ID: p
+Constant: 0
+BinaryOp: <=
+ID: p
+Constant: 2
+Compound:
+Assignment: =
+ID: t
+BinaryOp: +
+ID: t
+BinaryOp: /
+BinaryOp: *
+BinaryOp: -
+FuncCall:
+ID: f
+ExprList:
+ID: p
+FuncCall:
+ID: g
+ExprList:
+ID: p
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+If:
+BinaryOp: ||
+BinaryOp: &&
+BinaryOp: <=
+ID: p
+Constant: 0
+BinaryOp: >=
+ID: p
+UnaryOp: -
+Constant: 2
+BinaryOp: >
+ID: p
+Constant: 2
+Compound:
+Assignment: =
+ID: t
+BinaryOp: +
+ID: t
+BinaryOp: /
+BinaryOp: *
+BinaryOp: -
+FuncCall:
+ID: g
+ExprList:
+ID: p
+FuncCall:
+ID: f
+ExprList:
+ID: p
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.4lf"
+ID: t
+Return:
+Constant: 0

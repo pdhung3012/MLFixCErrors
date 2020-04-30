@@ -1,0 +1,186 @@
+FileAST
+Decl: max
+FuncDecl:
+ParamList:
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+TypeDecl: max
+IdentifierType: ['int']
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: N
+TypeDecl: N
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: N
+Decl: A
+ArrayDecl:
+TypeDecl: A
+IdentifierType: ['int']
+ID: N
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: N
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: A
+ID: i
+Decl: MaxTill
+ArrayDecl:
+TypeDecl: MaxTill
+IdentifierType: ['int']
+ID: N
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: N
+UnaryOp: p++
+ID: i
+Compound:
+Decl: f
+TypeDecl: f
+IdentifierType: ['int']
+UnaryOp: -
+Constant: 1
+Decl: s
+TypeDecl: s
+IdentifierType: ['int']
+Constant: 0
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: j
+ID: i
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: <
+ArrayRef:
+ID: A
+ID: j
+ArrayRef:
+ID: A
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: MaxTill
+ID: i
+FuncCall:
+ID: max
+ExprList:
+BinaryOp: +
+Constant: 1
+ArrayRef:
+ID: MaxTill
+ID: j
+ID: s
+Assignment: =
+ID: f
+Constant: 1
+Assignment: =
+ID: s
+BinaryOp: +
+Constant: 1
+ArrayRef:
+ID: MaxTill
+ID: j
+If:
+BinaryOp: ==
+ID: f
+UnaryOp: -
+Constant: 1
+Assignment: =
+ArrayRef:
+ID: MaxTill
+ID: i
+Constant: 1
+Decl: c
+TypeDecl: c
+IdentifierType: ['int']
+ArrayRef:
+ID: MaxTill
+Constant: 0
+For:
+DeclList:
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: k
+ID: n
+UnaryOp: p++
+ID: k
+Compound:
+If:
+BinaryOp: <
+ID: c
+ArrayRef:
+ID: MaxTill
+ID: k
+Assignment: =
+ID: c
+ArrayRef:
+ID: MaxTill
+ID: k
+Return:
+Constant: 0
+FuncDef:
+Decl: max
+FuncDecl:
+ParamList:
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+TypeDecl: b
+IdentifierType: ['int']
+TypeDecl: max
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: >=
+ID: a
+ID: b
+Return:
+ID: a
+Return:
+ID: b

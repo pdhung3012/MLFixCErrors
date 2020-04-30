@@ -1,0 +1,85 @@
+FileAST
+FuncDef:
+Decl: func
+FuncDecl:
+ParamList:
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Decl: size
+TypeDecl: size
+IdentifierType: ['int']
+TypeDecl: func
+IdentifierType: ['void']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: count
+TypeDecl: count
+IdentifierType: ['int']
+Constant: 1
+Decl: temp
+TypeDecl: temp
+IdentifierType: ['int']
+Constant: 0
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: size
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+BinaryOp: +
+ID: i
+Constant: 1
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: <
+ArrayRef:
+ID: a
+ID: i
+ArrayRef:
+ID: a
+ID: j
+Compound:
+UnaryOp: p++
+ID: count
+If:
+BinaryOp: >
+ID: count
+ID: temp
+Assignment: =
+ID: temp
+ID: count
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: temp
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Return:
+Constant: 0

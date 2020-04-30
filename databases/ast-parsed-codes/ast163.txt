@@ -1,0 +1,100 @@
+FileAST
+FuncDef:
+Decl: subseq
+FuncDecl:
+ParamList:
+Decl: t
+ArrayDecl:
+TypeDecl: t
+IdentifierType: ['int']
+Decl: r
+TypeDecl: r
+IdentifierType: ['int']
+TypeDecl: subseq
+IdentifierType: ['void']
+Compound:
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['int']
+Constant: 0
+Decl: flag
+TypeDecl: flag
+IdentifierType: ['int']
+Constant: 0
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: r
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: <
+ID: sum
+BinaryOp: +
+ID: sum
+ArrayRef:
+ID: t
+ID: i
+Compound:
+Assignment: =
+ID: flag
+BinaryOp: +
+ID: flag
+Constant: 1
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: flag
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%dn"
+UnaryOp: &
+ID: n
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+ID: n
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d "
+UnaryOp: &
+ArrayRef:
+ID: a
+ID: i
+FuncCall:
+ID: subseq
+ExprList:
+ID: a
+ID: n
+Return:
+Constant: 0
