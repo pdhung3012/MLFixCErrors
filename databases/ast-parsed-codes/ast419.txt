@@ -1,0 +1,115 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: arr
+PtrDecl:
+TypeDecl: arr
+IdentifierType: ['int']
+Decl: time1
+TypeDecl: time1
+IdentifierType: ['int']
+Decl: time2
+TypeDecl: time2
+IdentifierType: ['int']
+Decl: indexA
+TypeDecl: indexA
+IdentifierType: ['int']
+Constant: 0
+Decl: indexB
+TypeDecl: indexB
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Assignment: =
+ID: indexB
+BinaryOp: -
+ID: n
+Constant: 1
+Assignment: =
+ID: arr
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: n
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+BinaryOp: +
+ID: arr
+ID: i
+While:
+Constant: 1
+Compound:
+If:
+BinaryOp: ==
+ID: indexA
+BinaryOp: -
+ID: indexB
+Constant: 1
+Compound:
+Break:
+If:
+BinaryOp: >
+ID: time1
+ID: time2
+Compound:
+UnaryOp: p--
+ID: indexB
+Assignment: +=
+ID: time2
+ArrayRef:
+ID: arr
+ID: indexB
+Compound:
+UnaryOp: p++
+ID: indexA
+Assignment: +=
+ID: time1
+ArrayRef:
+ID: arr
+ID: indexA
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d"
+BinaryOp: +
+ID: indexA
+Constant: 1
+BinaryOp: -
+ID: n
+ID: indexB
+Return:
+Constant: 0

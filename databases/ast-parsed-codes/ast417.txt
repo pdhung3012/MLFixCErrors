@@ -1,0 +1,209 @@
+FileAST
+FuncDef:
+Decl: f
+FuncDecl:
+ParamList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: t
+ArrayDecl:
+TypeDecl: t
+IdentifierType: ['int']
+TypeDecl: f
+IdentifierType: ['int']
+Compound:
+Decl: s1
+TypeDecl: s1
+IdentifierType: ['int']
+Constant: 0
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: k
+Constant: 1
+BinaryOp: <=
+ID: k
+ID: i
+UnaryOp: p++
+ID: k
+Compound:
+Assignment: =
+ID: s1
+BinaryOp: +
+ID: s1
+ArrayRef:
+ID: t
+ID: i
+Return:
+ID: s1
+FuncDef:
+Decl: g
+FuncDecl:
+ParamList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: t
+ArrayDecl:
+TypeDecl: t
+IdentifierType: ['int']
+TypeDecl: g
+IdentifierType: ['int']
+Compound:
+Decl: s2
+TypeDecl: s2
+IdentifierType: ['int']
+Constant: 0
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: k
+ID: n
+BinaryOp: >=
+ID: k
+ID: j
+UnaryOp: p--
+ID: k
+Compound:
+Assignment: =
+ID: s2
+BinaryOp: +
+ID: s2
+ArrayRef:
+ID: t
+ID: i
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: s1
+TypeDecl: s1
+IdentifierType: ['int']
+Decl: s2
+TypeDecl: s2
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Decl: t
+ArrayDecl:
+TypeDecl: t
+IdentifierType: ['int']
+BinaryOp: +
+ID: n
+Constant: 1
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: t
+ID: i
+Assignment: =
+ID: i
+Constant: 1
+Assignment: =
+ID: j
+ID: n
+While:
+BinaryOp: !=
+ID: i
+ID: j
+Compound:
+Assignment: =
+ID: s1
+Constant: 0
+Assignment: =
+ID: s2
+Constant: 0
+Assignment: =
+ID: s1
+FuncCall:
+ID: f
+ExprList:
+ID: i
+ID: t
+Assignment: =
+ID: s2
+FuncCall:
+ID: g
+ExprList:
+ID: j
+ID: t
+If:
+BinaryOp: >
+ID: s1
+ID: s2
+UnaryOp: p--
+ID: j
+UnaryOp: p++
+ID: i
+If:
+BinaryOp: >
+FuncCall:
+ID: f
+ExprList:
+ID: i
+ID: t
+FuncCall:
+ID: g
+ExprList:
+ID: i
+ID: t
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d"
+BinaryOp: +
+ID: i
+Constant: 1
+ID: j
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d"
+ID: i
+BinaryOp: -
+ID: j
+Constant: 1
+Return:
+Constant: 0

@@ -1,0 +1,245 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: count
+TypeDecl: count
+IdentifierType: ['int']
+Constant: 0
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Decl: y
+TypeDecl: y
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: m
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: x
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: y
+Decl: a
+PtrDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+PtrDecl:
+TypeDecl: b
+IdentifierType: ['int']
+Assignment: =
+ID: a
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: a
+ID: i
+Assignment: =
+ID: b
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+ID: m
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: m
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: b
+ID: i
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: allot
+ArrayDecl:
+PtrDecl:
+TypeDecl: allot
+IdentifierType: ['int']
+Constant: 2
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: m
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: allot
+ID: count
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: <=
+BinaryOp: -
+ArrayRef:
+ID: a
+ID: j
+ID: x
+ArrayRef:
+ID: b
+ID: i
+BinaryOp: <=
+ArrayRef:
+ID: b
+ID: i
+BinaryOp: +
+ArrayRef:
+ID: a
+ID: j
+ID: y
+Compound:
+For:
+BinaryOp: <
+ID: k
+ID: count
+UnaryOp: p++
+ID: k
+If:
+BinaryOp: ==
+ArrayRef:
+ArrayRef:
+ID: allot
+ID: k
+Constant: 0
+BinaryOp: +
+ID: j
+Constant: 1
+Break:
+If:
+BinaryOp: ==
+ID: k
+ID: count
+Compound:
+Assignment: =
+ArrayRef:
+ArrayRef:
+ID: allot
+ID: k
+Constant: 0
+BinaryOp: +
+ID: j
+Constant: 1
+Assignment: =
+ArrayRef:
+ArrayRef:
+ID: allot
+ID: k
+Constant: 1
+BinaryOp: +
+ID: i
+Constant: 1
+UnaryOp: p++
+ID: count
+Break:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: count
+Return:
+Constant: 0

@@ -1,0 +1,186 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Decl: y
+TypeDecl: y
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: t
+TypeDecl: t
+IdentifierType: ['int']
+Constant: 0
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Constant: 500
+Decl: b
+ArrayDecl:
+TypeDecl: b
+IdentifierType: ['int']
+Constant: 500
+Decl: ar
+ArrayDecl:
+TypeDecl: ar
+IdentifierType: ['int']
+Constant: 500
+Decl: br
+ArrayDecl:
+TypeDecl: br
+IdentifierType: ['int']
+Constant: 500
+Decl: count
+TypeDecl: count
+IdentifierType: ['int']
+Constant: 0
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d %d %d"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: m
+UnaryOp: &
+ID: x
+UnaryOp: &
+ID: y
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: a
+ID: i
+For:
+Assignment: =
+ID: j
+Constant: 1
+BinaryOp: <=
+ID: j
+ID: m
+UnaryOp: p++
+ID: j
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: b
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+BinaryOp: +
+ID: t
+Constant: 1
+BinaryOp: <=
+ID: j
+ID: m
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: >=
+ArrayRef:
+ID: a
+ID: i
+BinaryOp: -
+ArrayRef:
+ID: b
+ID: j
+ID: x
+BinaryOp: <=
+ArrayRef:
+ID: a
+ID: i
+BinaryOp: +
+ArrayRef:
+ID: b
+ID: j
+ID: y
+Compound:
+UnaryOp: p++
+ID: count
+Assignment: =
+ArrayRef:
+ID: ar
+ID: t
+ID: i
+Assignment: =
+ArrayRef:
+ID: br
+ID: t
+ID: j
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: count
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d"
+ArrayRef:
+ID: ar
+ID: i
+ArrayRef:
+ID: br
+ID: i
+Return:
+Constant: 0

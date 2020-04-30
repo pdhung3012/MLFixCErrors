@@ -1,0 +1,169 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: l
+TypeDecl: l
+IdentifierType: ['int']
+Decl: r
+TypeDecl: r
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: c
+TypeDecl: c
+IdentifierType: ['int']
+Constant: 0
+FuncCall:
+ID: s
+ExprList:
+ID: m
+FuncCall:
+ID: s
+ExprList:
+ID: n
+FuncCall:
+ID: s
+ExprList:
+ID: l
+FuncCall:
+ID: s
+ExprList:
+ID: r
+Decl: a
+PtrDecl:
+TypeDecl: a
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+ID: m
+Decl: b
+PtrDecl:
+TypeDecl: b
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: m
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: s
+ExprList:
+UnaryOp: *
+BinaryOp: +
+ID: a
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: s
+ExprList:
+UnaryOp: *
+BinaryOp: +
+ID: b
+ID: i
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: &&
+BinaryOp: <
+ID: i
+ID: n
+BinaryOp: <
+ID: j
+ID: m
+UnaryOp: p++
+ID: i
+Compound:
+While:
+BinaryOp: &&
+BinaryOp: <
+ID: j
+ID: m
+BinaryOp: <
+UnaryOp: *
+BinaryOp: +
+ID: b
+ID: i
+BinaryOp: -
+UnaryOp: *
+BinaryOp: +
+ID: a
+ID: j
+ID: l
+UnaryOp: p++
+ID: j
+If:
+BinaryOp: &&
+BinaryOp: <
+ID: j
+ID: m
+BinaryOp: >
+UnaryOp: *
+BinaryOp: +
+ID: b
+ID: i
+BinaryOp: +
+UnaryOp: *
+BinaryOp: +
+ID: a
+ID: j
+ID: r
+UnaryOp: p--
+ID: c
+FuncCall:
+ID: p
+ExprList:
+BinaryOp: -
+ID: n
+ID: c
+FuncCall:
+ID: free
+ExprList:
+ID: a
+FuncCall:
+ID: free
+ExprList:
+ID: b
+Return:
+Constant: 0

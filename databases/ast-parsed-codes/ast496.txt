@@ -1,0 +1,74 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: x1
+TypeDecl: x1
+IdentifierType: ['int']
+Decl: x2
+TypeDecl: x2
+IdentifierType: ['int']
+Decl: y1
+TypeDecl: y1
+IdentifierType: ['int']
+Decl: y2
+TypeDecl: y2
+IdentifierType: ['int']
+Decl: slope
+TypeDecl: slope
+IdentifierType: ['float']
+Decl: inf
+TypeDecl: inf
+IdentifierType: ['float']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: x1
+UnaryOp: &
+ID: y1
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: x2
+UnaryOp: &
+ID: y2
+Assignment: =
+ID: slope
+BinaryOp: /
+Cast: None
+Typename: None
+TypeDecl: None
+IdentifierType: ['float']
+BinaryOp: -
+ID: y2
+ID: y1
+BinaryOp: -
+ID: x2
+ID: x1
+If:
+BinaryOp: ||
+BinaryOp: ==
+ID: slope
+UnaryOp: -
+ID: inf
+BinaryOp: ==
+ID: slope
+ID: inf
+FuncCall:
+ID: printf
+ExprList:
+Constant: "inf"
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.2f"
+ID: slope
+Return:
+Constant: 0

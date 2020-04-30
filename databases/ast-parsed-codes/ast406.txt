@@ -1,0 +1,201 @@
+FileAST
+Decl: alice
+TypeDecl: alice
+IdentifierType: ['int']
+Decl: bob
+TypeDecl: bob
+IdentifierType: ['int']
+FuncDef:
+Decl: sum1
+FuncDecl:
+ParamList:
+Decl: times
+PtrDecl:
+TypeDecl: times
+IdentifierType: ['int']
+Decl: start
+TypeDecl: start
+IdentifierType: ['int']
+TypeDecl: sum1
+IdentifierType: ['int']
+Compound:
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['int']
+Constant: 0
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <
+ID: i
+ID: start
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ID: sum
+BinaryOp: +
+ID: sum
+ArrayRef:
+ID: times
+ID: i
+Return:
+ID: sum
+FuncDef:
+Decl: compare
+FuncDecl:
+ParamList:
+Decl: times
+PtrDecl:
+TypeDecl: times
+IdentifierType: ['int']
+Decl: start
+TypeDecl: start
+IdentifierType: ['int']
+Decl: end
+TypeDecl: end
+IdentifierType: ['int']
+TypeDecl: compare
+IdentifierType: ['void']
+Compound:
+If:
+BinaryOp: >
+ID: start
+ID: end
+Compound:
+Return:
+If:
+BinaryOp: ==
+ID: start
+ID: end
+Compound:
+UnaryOp: p++
+ID: alice
+Return:
+If:
+BinaryOp: >
+FuncCall:
+ID: sum1
+ExprList:
+ID: times
+ID: start
+FuncCall:
+ID: sum2
+ExprList:
+ID: times
+ID: end
+Compound:
+UnaryOp: p++
+ID: bob
+FuncCall:
+ID: compare
+ExprList:
+ID: times
+ID: start
+BinaryOp: -
+ID: end
+Constant: 1
+If:
+BinaryOp: <
+FuncCall:
+ID: sum1
+ExprList:
+ID: times
+ID: start
+FuncCall:
+ID: sum2
+ExprList:
+ID: times
+ID: end
+Compound:
+UnaryOp: p++
+ID: alice
+FuncCall:
+ID: compare
+ExprList:
+ID: times
+BinaryOp: +
+ID: start
+Constant: 1
+ID: end
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: times
+PtrDecl:
+TypeDecl: times
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Assignment: =
+ID: times
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: n
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+BinaryOp: +
+ID: times
+ID: i
+Decl: start
+TypeDecl: start
+IdentifierType: ['int']
+Constant: 0
+Decl: end
+TypeDecl: end
+IdentifierType: ['int']
+BinaryOp: -
+ID: n
+Constant: 1
+FuncCall:
+ID: compare
+ExprList:
+ID: times
+ID: start
+ID: end
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d"
+ID: alice
+ID: bob
+Return:
+Constant: 0

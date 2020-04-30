@@ -1,0 +1,193 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: u
+TypeDecl: u
+IdentifierType: ['int']
+Decl: v
+TypeDecl: v
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d%d%d%d\n"
+UnaryOp: &
+ID: m
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: u
+UnaryOp: &
+ID: v
+Decl: A
+ArrayDecl:
+ArrayDecl:
+TypeDecl: A
+IdentifierType: ['int']
+ID: n
+ID: m
+Decl: B
+ArrayDecl:
+ArrayDecl:
+TypeDecl: B
+IdentifierType: ['int']
+ID: v
+ID: u
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: m
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ArrayRef:
+ID: A
+ID: i
+ID: j
+FuncCall:
+ID: scanf
+ExprList:
+Constant: ""
+If:
+BinaryOp: ==
+ID: n
+ID: u
+Compound:
+Decl: C
+ArrayDecl:
+ArrayDecl:
+TypeDecl: C
+IdentifierType: ['int']
+ID: v
+ID: m
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: m
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: v
+UnaryOp: p++
+ID: j
+Compound:
+Assignment: =
+ArrayRef:
+ArrayRef:
+ID: C
+ID: i
+ID: j
+Constant: 0
+For:
+Assignment: =
+ID: k
+Constant: 0
+BinaryOp: <
+ID: k
+ID: u
+UnaryOp: p++
+ID: k
+Compound:
+Assignment: =
+ArrayRef:
+ArrayRef:
+ID: C
+ID: i
+ID: j
+BinaryOp: +
+ArrayRef:
+ArrayRef:
+ID: C
+ID: i
+ID: j
+BinaryOp: *
+ArrayRef:
+ArrayRef:
+ID: A
+ID: i
+ID: k
+ArrayRef:
+ArrayRef:
+ID: B
+ID: k
+ID: j
+If:
+BinaryOp: ==
+ID: j
+BinaryOp: -
+ID: v
+Constant: 1
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ArrayRef:
+ArrayRef:
+ID: C
+ID: i
+ID: j
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d "
+ArrayRef:
+ArrayRef:
+ID: C
+ID: i
+ID: j
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "ERROR"
+Return:
+Constant: 0

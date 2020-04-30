@@ -1,0 +1,71 @@
+FileAST
+FuncDef:
+Decl: A
+FuncDecl:
+ParamList:
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: A
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: ==
+ID: m
+Constant: 0
+Compound:
+Return:
+BinaryOp: +
+ID: n
+Constant: 1
+If:
+BinaryOp: ==
+ID: n
+Constant: 0
+Compound:
+Return:
+FuncCall:
+ID: A
+ExprList:
+BinaryOp: -
+ID: m
+Constant: 1
+Constant: 1
+Compound:
+Return:
+FuncCall:
+ID: A
+ExprList:
+BinaryOp: -
+ID: m
+Constant: 1
+FuncCall:
+ID: A
+ExprList:
+ID: m
+BinaryOp: -
+ID: n
+Constant: 1
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: o
+TypeDecl: o
+IdentifierType: ['int']
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+FuncCall:
+ID: A
+ExprList:
+Constant: 1
+ID: o
+Return:
+Constant: 0
