@@ -1,0 +1,174 @@
+FileAST
+FuncDef:
+Decl: max
+FuncDecl:
+ParamList:
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+TypeDecl: b
+IdentifierType: ['int']
+TypeDecl: max
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: >
+ID: a
+ID: b
+Return:
+ID: a
+Return:
+ID: b
+FuncDef:
+Decl: min
+FuncDecl:
+ParamList:
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+TypeDecl: b
+IdentifierType: ['int']
+TypeDecl: min
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: >
+ID: a
+ID: b
+Return:
+ID: b
+Return:
+ID: a
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: c
+TypeDecl: c
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: m
+UnaryOp: &
+ID: n
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+BinaryOp: +
+ID: n
+Constant: 2
+Decl: b
+ArrayDecl:
+TypeDecl: b
+IdentifierType: ['int']
+BinaryOp: +
+ID: m
+Constant: 2
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 1
+BinaryOp: <=
+ID: i
+ID: m
+UnaryOp: p++
+ID: i
+Compound:
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 1
+BinaryOp: <=
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d "
+UnaryOp: &
+ArrayRef:
+ID: a
+ID: j
+For:
+DeclList:
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Constant: 1
+BinaryOp: <=
+ID: k
+ID: n
+UnaryOp: p++
+ID: k
+Compound:
+Assignment: =
+ArrayRef:
+ID: b
+ID: i
+FuncCall:
+ID: max
+ExprList:
+ArrayRef:
+ID: a
+ID: k
+ArrayRef:
+ID: a
+BinaryOp: +
+ID: k
+Constant: 1
+For:
+DeclList:
+Decl: w
+TypeDecl: w
+IdentifierType: ['int']
+Constant: 1
+BinaryOp: <=
+ID: w
+ID: m
+UnaryOp: p++
+ID: w
+Compound:
+Assignment: =
+ID: c
+FuncCall:
+ID: min
+ExprList:
+ArrayRef:
+ID: b
+ID: i
+ArrayRef:
+ID: b
+BinaryOp: +
+ID: i
+Constant: 1
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: c
+Return:
+Constant: 0

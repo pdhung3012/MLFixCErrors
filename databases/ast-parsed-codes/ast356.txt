@@ -1,0 +1,118 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Constant: 100
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d%d"
+UnaryOp: &
+ID: k
+UnaryOp: &
+ID: n
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Assignment: =
+ID: x
+Constant: 2
+Decl: count
+TypeDecl: count
+IdentifierType: ['int']
+For:
+DeclList:
+Decl: v
+TypeDecl: v
+IdentifierType: ['int']
+BinaryOp: <
+ID: v
+ID: n
+UnaryOp: p++
+ID: v
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: a
+ID: v
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+BinaryOp: +
+ID: i
+Constant: 1
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: ==
+BinaryOp: +
+ArrayRef:
+ID: a
+ID: i
+ArrayRef:
+ID: a
+ID: j
+ID: k
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "lucky"
+Assignment: =
+ID: x
+Constant: 1
+Break:
+If:
+BinaryOp: ==
+ID: x
+Constant: 1
+Compound:
+Break:
+If:
+BinaryOp: ==
+ID: x
+Constant: 2
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "unlucky"
+Return:
+Constant: 0

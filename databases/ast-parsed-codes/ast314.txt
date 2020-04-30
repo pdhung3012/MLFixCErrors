@@ -1,0 +1,100 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: delta
+TypeDecl: delta
+IdentifierType: ['double']
+Decl: p1
+TypeDecl: p1
+IdentifierType: ['double']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf%lf%d"
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+UnaryOp: &
+ID: n
+Assignment: =
+ID: delta
+BinaryOp: /
+BinaryOp: *
+Constant: 1.0
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <=
+ID: i
+BinaryOp: -
+ID: n
+Constant: 1
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: <
+ID: a
+UnaryOp: -
+Constant: 1
+BinaryOp: <
+ID: b
+UnaryOp: -
+Constant: 1
+Compound:
+Assignment: =
+ID: p1
+ID: delta
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%lf"
+ID: p1
+If:
+BinaryOp: &&
+BinaryOp: &&
+BinaryOp: <
+ID: a
+UnaryOp: -
+Constant: 1
+BinaryOp: >
+ID: b
+UnaryOp: -
+Constant: 1
+BinaryOp: <
+ID: b
+Constant: 1
+Compound:
+Decl: p2
+TypeDecl: p2
+IdentifierType: ['int']
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%lf"
+ID: p1
+Return:
+Constant: 0

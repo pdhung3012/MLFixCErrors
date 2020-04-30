@@ -1,0 +1,104 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: d
+TypeDecl: d
+IdentifierType: ['double']
+Decl: area
+TypeDecl: area
+IdentifierType: ['double']
+Constant: 0.0
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+Decl: v
+TypeDecl: v
+IdentifierType: ['double']
+Decl: n
+TypeDecl: n
+IdentifierType: ['double']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%f %f"
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+Assignment: =
+ID: x
+ID: a
+Assignment: =
+ID: d
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+While:
+BinaryOp: <
+ID: x
+ID: b
+Compound:
+If:
+BinaryOp: <=
+ID: x
+UnaryOp: -
+Constant: 1
+Assignment: =
+ID: v
+Constant: 1
+If:
+BinaryOp: &&
+BinaryOp: >
+ID: x
+UnaryOp: -
+Constant: 1
+BinaryOp: <
+ID: x
+Constant: 1
+Assignment: =
+ID: v
+BinaryOp: *
+ID: x
+ID: x
+If:
+BinaryOp: >=
+ID: x
+Constant: 1
+Assignment: =
+ID: v
+BinaryOp: *
+BinaryOp: *
+ID: x
+ID: x
+ID: x
+Assignment: =
+ID: area
+BinaryOp: +
+ID: area
+BinaryOp: *
+ID: v
+ID: d
+Assignment: =
+ID: x
+BinaryOp: +
+ID: x
+ID: d
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.4f"
+ID: area
+Return:
+Constant: 0

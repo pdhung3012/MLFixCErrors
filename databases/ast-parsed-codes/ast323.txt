@@ -1,0 +1,180 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: w
+TypeDecl: w
+IdentifierType: ['double']
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['double']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+Decl: x
+ArrayDecl:
+TypeDecl: x
+IdentifierType: ['double']
+ID: i
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf"
+UnaryOp: &
+ID: a
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf"
+UnaryOp: &
+ID: b
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+If:
+BinaryOp: >=
+ID: b
+ID: a
+Compound:
+Assignment: =
+ID: w
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: +
+BinaryOp: *
+ID: w
+ID: i
+ID: a
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['double']
+Constant: 0
+If:
+BinaryOp: <
+ArrayRef:
+ID: x
+ID: i
+Constant: 0
+Compound:
+Assignment: =
+ID: sum
+BinaryOp: +
+ID: sum
+BinaryOp: *
+BinaryOp: -
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+BinaryOp: -
+ID: i
+Constant: 1
+Constant: 1
+If:
+BinaryOp: &&
+BinaryOp: >
+ArrayRef:
+ID: x
+ID: i
+UnaryOp: -
+Constant: 1
+BinaryOp: <
+ArrayRef:
+ID: x
+ID: i
+Constant: 1
+Compound:
+Assignment: =
+ID: sum
+BinaryOp: +
+ID: sum
+BinaryOp: *
+BinaryOp: -
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+BinaryOp: -
+ID: i
+Constant: 1
+BinaryOp: *
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+If:
+BinaryOp: >
+ArrayRef:
+ID: x
+ID: i
+Constant: 1
+Compound:
+Assignment: =
+ID: sum
+BinaryOp: +
+ID: sum
+BinaryOp: *
+BinaryOp: -
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+BinaryOp: -
+ID: i
+Constant: 1
+BinaryOp: *
+BinaryOp: *
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.4lf"
+ID: sum
+Return:
+Constant: 0

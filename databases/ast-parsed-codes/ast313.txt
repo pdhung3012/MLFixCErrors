@@ -1,0 +1,141 @@
+FileAST
+FuncDef:
+Decl: f
+FuncDecl:
+ParamList:
+Decl: c
+TypeDecl: c
+IdentifierType: ['double']
+TypeDecl: f
+IdentifierType: ['double']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+If:
+BinaryOp: <=
+ID: c
+UnaryOp: -
+Constant: 1
+Return:
+Constant: 1
+If:
+BinaryOp: &&
+BinaryOp: <
+UnaryOp: -
+Constant: 1
+ID: c
+BinaryOp: <
+ID: c
+Constant: 1
+Return:
+BinaryOp: *
+ID: i
+ID: i
+If:
+BinaryOp: >=
+ID: c
+Constant: 1
+Return:
+BinaryOp: *
+BinaryOp: *
+ID: i
+ID: i
+ID: i
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Assignment: =
+ID: sum
+Constant: 0
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf%lf%d"
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+UnaryOp: &
+ID: n
+Decl: delta_x
+TypeDecl: delta_x
+IdentifierType: ['double']
+Assignment: =
+ID: delta_x
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+Decl: x
+ArrayDecl:
+TypeDecl: x
+IdentifierType: ['double']
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: i
+ID: delta_x
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ID: sum
+BinaryOp: +
+ID: sum
+BinaryOp: *
+FuncCall:
+ID: f
+ExprList:
+ArrayRef:
+ID: x
+ID: i
+ID: delta_x
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%lf"
+ID: sum
+Return:
+Constant: 0
