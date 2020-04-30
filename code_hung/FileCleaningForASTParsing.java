@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileTranslation {
+public class FileCleaningForASTParsing {
 	public static void main(String [] args) throws IOException, FileNotFoundException{
 		for(int i = 1; i < 277; i++) {
 			if(i != 139) {
