@@ -1,0 +1,71 @@
+FileAST
+FuncDef:
+Decl: sum
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+TypeDecl: sum
+IdentifierType: ['int']
+Compound:
+FuncDef:
+Decl: cat
+FuncDecl:
+ParamList:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: cat
+IdentifierType: ['int']
+Compound:
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['int']
+Constant: 0
+If:
+BinaryOp: ||
+BinaryOp: ==
+ID: n
+Constant: 0
+BinaryOp: ==
+ID: n
+Constant: 1
+Return:
+Constant: 1
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: +=
+ID: sum
+BinaryOp: *
+FuncCall:
+ID: cat
+ExprList:
+BinaryOp: -
+ID: n
+Constant: 1
+FuncCall:
+ID: cat
+ExprList:
+BinaryOp: -
+ID: n
+Constant: 2
+Return:
+ID: sum
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Return:
+Constant: 0

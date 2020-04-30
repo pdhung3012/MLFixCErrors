@@ -1,0 +1,142 @@
+FileAST
+FuncDef:
+Decl: catalan
+FuncDecl:
+ParamList:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: catalan
+IdentifierType: ['int']
+Compound:
+Decl: cat
+TypeDecl: cat
+IdentifierType: ['int']
+If:
+BinaryOp: ==
+ID: n
+Constant: 0
+Return:
+Constant: 1
+Assignment: =
+ID: cat
+BinaryOp: /
+BinaryOp: *
+FuncCall:
+ID: catalan
+ExprList:
+BinaryOp: -
+ID: n
+Constant: 1
+BinaryOp: -
+BinaryOp: *
+Constant: 4
+ID: n
+Constant: 2
+BinaryOp: +
+ID: n
+Constant: 1
+Return:
+ID: cat
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: t
+TypeDecl: t
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: k
+ArrayDecl:
+TypeDecl: k
+IdentifierType: ['long']
+Constant: 20
+Decl: cat
+ArrayDecl:
+TypeDecl: cat
+IdentifierType: ['long']
+Constant: 20
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%dn"
+UnaryOp: &
+ID: t
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ldn"
+UnaryOp: &
+ArrayRef:
+ID: k
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+Constant: 20
+UnaryOp: p++
+ID: i
+Assignment: =
+ArrayRef:
+ID: cat
+ID: i
+FuncCall:
+ID: catalan
+ExprList:
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+Compound:
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+BinaryOp: <
+ID: j
+Constant: 20
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: >
+ArrayRef:
+ID: k
+ID: i
+ArrayRef:
+ID: cat
+ID: j
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%ldn"
+ArrayRef:
+ID: cat
+ID: j
+Break:
+Return:
+Constant: 0

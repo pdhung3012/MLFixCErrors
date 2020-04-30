@@ -1,0 +1,167 @@
+FileAST
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+TypeDecl: b
+IdentifierType: ['int']
+Decl: c
+TypeDecl: c
+IdentifierType: ['int']
+Decl: sz
+ArrayDecl:
+TypeDecl: sz
+IdentifierType: ['int']
+FuncDef:
+Decl: getMaxLessThan
+FuncDecl:
+ParamList:
+Decl: upperLimit
+TypeDecl: upperLimit
+IdentifierType: ['int']
+TypeDecl: getMaxLessThan
+IdentifierType: ['int']
+Compound:
+Decl: max
+TypeDecl: max
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+Decl: max
+TypeDecl: max
+IdentifierType: ['int']
+Constant: 0
+If:
+BinaryOp: &&
+BinaryOp: >
+ArrayRef:
+ID: sz
+ID: j
+ID: max
+BinaryOp: <
+ArrayRef:
+ID: sz
+ID: j
+ID: upperLimit
+Compound:
+Assignment: =
+ID: max
+ArrayRef:
+ID: sz
+ID: j
+Return:
+ID: max
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: k
+Decl: sz
+ArrayDecl:
+TypeDecl: sz
+IdentifierType: ['int']
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: sz
+ID: i
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Constant: 0
+For:
+Assignment: =
+ID: a
+Constant: 0
+BinaryOp: <
+ID: a
+ID: n
+UnaryOp: p++
+ID: a
+Compound:
+If:
+BinaryOp: >
+ArrayRef:
+ID: sz
+ID: a
+ID: m
+Compound:
+Assignment: =
+ID: m
+ArrayRef:
+ID: sz
+ID: a
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: m
+For:
+Assignment: =
+ID: b
+Constant: 1
+BinaryOp: <
+ID: b
+ID: k
+UnaryOp: p++
+ID: b
+Compound:
+Assignment: =
+ID: c
+FuncCall:
+ID: getMaxLessThan
+ExprList:
+ID: m
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: c
+Assignment: =
+ID: m
+ID: c
+Return:
+Constant: 0

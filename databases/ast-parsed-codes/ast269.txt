@@ -1,0 +1,169 @@
+FileAST
+Decl: arr
+ArrayDecl:
+TypeDecl: arr
+IdentifierType: ['int']
+Constant: 100
+InitList:
+Constant: 0
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncDef:
+Decl: getMaxLessThan
+FuncDecl:
+ParamList:
+Decl: upperLimit
+TypeDecl: upperLimit
+IdentifierType: ['int']
+TypeDecl: getMaxLessThan
+IdentifierType: ['int']
+Compound:
+Decl: d
+TypeDecl: d
+IdentifierType: ['int']
+Constant: 0
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+Decl: mi
+TypeDecl: mi
+IdentifierType: ['int']
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+BinaryOp: +
+ID: i
+Constant: 1
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: <
+ArrayRef:
+ID: arr
+ID: i
+ArrayRef:
+ID: arr
+ID: j
+Compound:
+Assignment: =
+ID: a
+ArrayRef:
+ID: arr
+ID: i
+Assignment: =
+ArrayRef:
+ID: arr
+ID: i
+ArrayRef:
+ID: arr
+ID: j
+Assignment: =
+ArrayRef:
+ID: arr
+ID: j
+ID: a
+If:
+BinaryOp: <=
+ArrayRef:
+ID: arr
+ID: d
+ID: upperLimit
+Assignment: =
+ID: mi
+ArrayRef:
+ID: arr
+ID: d
+Return:
+ID: mi
+UnaryOp: p++
+ID: d
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: l
+TypeDecl: l
+IdentifierType: ['int']
+Decl: lc
+ArrayDecl:
+TypeDecl: lc
+IdentifierType: ['int']
+ID: k
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %dn"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: k
+For:
+DeclList:
+Decl: p
+TypeDecl: p
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: p
+ID: n
+UnaryOp: p++
+ID: p
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+ArrayRef:
+ID: arr
+ID: p
+For:
+DeclList:
+Decl: l
+TypeDecl: l
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: l
+ID: k
+UnaryOp: p++
+ID: l
+Assignment: =
+ArrayRef:
+ID: lc
+ID: l
+FuncCall:
+ID: getMaxLessThan
+ExprList:
+Constant: 999
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%dn"
+ArrayRef:
+ID: lc
+ID: l
+Return:
+Constant: 0

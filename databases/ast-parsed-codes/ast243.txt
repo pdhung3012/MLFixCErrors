@@ -1,0 +1,77 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: flag
+TypeDecl: flag
+IdentifierType: ['int']
+Constant: 0
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+ID: n
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 1
+BinaryOp: <=
+ID: i
+BinaryOp: *
+ID: n
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+If:
+BinaryOp: ==
+BinaryOp: %
+ID: n
+ID: i
+Constant: 0
+Compound:
+If:
+BinaryOp: !=
+ID: a
+Constant: 1
+Compound:
+UnaryOp: p++
+ID: flag
+Break:
+If:
+BinaryOp: !=
+ID: a
+Constant: 0
+Compound:
+UnaryOp: p++
+ID: flag
+Break:
+If:
+BinaryOp: ==
+ID: flag
+Constant: 0
+FuncCall:
+ID: printf
+ExprList:
+Constant: "GIVEN %d X %d matrix is an IDENTITY MATRIX"
+ID: n
+ID: n
+FuncCall:
+ID: printf
+ExprList:
+Constant: "GIVEN %d X %d matrix is NOT an IDENTITY MATRIX"
+ID: n
+ID: n
+Return:
+Constant: 0
