@@ -1,0 +1,124 @@
+FileAST
+FuncDef:
+Decl: hanoi
+FuncDecl:
+ParamList:
+ID: n
+ID: r
+TypeDecl: hanoi
+IdentifierType: ['int']
+Compound:
+Assignment: =
+ID: r
+Constant: 2
+If:
+BinaryOp: ==
+ID: n
+Constant: 1
+Return:
+Constant: 1
+Return:
+BinaryOp: +
+BinaryOp: *
+Constant: 2
+FuncCall:
+ID: hanoi
+ExprList:
+ID: n
+ID: r
+FuncCall:
+ID: hanoi
+ExprList:
+BinaryOp: -
+ID: n
+Constant: 1
+BinaryOp: -
+ID: r
+Constant: 1
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: t
+TypeDecl: t
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: s
+ArrayDecl:
+TypeDecl: s
+IdentifierType: ['int']
+Constant: 100
+Decl: k
+TypeDecl: k
+IdentifierType: ['long', 'long']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%dn"
+UnaryOp: &
+ID: t
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+Constant: 100
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: s
+ID: i
+FuncCall:
+ID: hanoi
+ExprList:
+ID: i
+Constant: 3
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lldn"
+UnaryOp: &
+ID: k
+While:
+BinaryOp: <
+ID: k
+Constant: 5000000
+Compound:
+If:
+BinaryOp: <
+ArrayRef:
+ID: s
+ID: j
+ID: k
+Compound:
+UnaryOp: p++
+ID: j
+If:
+BinaryOp: ==
+ArrayRef:
+ID: s
+ID: j
+ID: k
+Break:
+Return:
+Constant: 0

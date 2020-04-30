@@ -1,0 +1,93 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: t
+TypeDecl: t
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%dn"
+UnaryOp: &
+ID: t
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+ID: t
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%dn"
+UnaryOp: &
+ArrayRef:
+ID: a
+ID: t
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ID: j
+Constant: 0
+While:
+BinaryOp: <
+FuncCall:
+ID: pow
+ExprList:
+Constant: 2
+ID: j
+ArrayRef:
+ID: a
+ID: i
+UnaryOp: p++
+ID: j
+If:
+BinaryOp: ==
+ID: x
+BinaryOp: -
+FuncCall:
+ID: pow
+ExprList:
+Constant: 2
+ID: j
+Constant: 1
+FuncCall:
+ID: printf
+ExprList:
+Constant: "yesn"
+FuncCall:
+ID: printf
+ExprList:
+Constant: "non"
+Return:
+Constant: 0

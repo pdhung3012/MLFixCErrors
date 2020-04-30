@@ -1,0 +1,98 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: m
+Decl: gold
+ArrayDecl:
+TypeDecl: gold
+IdentifierType: ['int']
+ID: m
+Decl: sum
+ArrayDecl:
+TypeDecl: sum
+IdentifierType: ['int']
+ID: n
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Assignment: =
+ArrayRef:
+ID: sum
+ID: i
+Constant: 0
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 1
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: j
+ID: m
+UnaryOp: p++
+ID: j
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: gold
+ID: j
+Assignment: =
+ArrayRef:
+ID: sum
+ID: j
+BinaryOp: +
+ArrayRef:
+ID: sum
+ID: j
+ArrayRef:
+ID: gold
+ID: j
+Return:
+Constant: 0
