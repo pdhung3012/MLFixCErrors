@@ -1,0 +1,141 @@
+FileAST
+Decl: catalan
+FuncDecl:
+ParamList:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: catalan
+IdentifierType: ['int']
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['int']
+Constant: 0
+Decl: ans
+TypeDecl: ans
+IdentifierType: ['int']
+Constant: 0
+FuncDef:
+Decl: catalan
+FuncDecl:
+ParamList:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: catalan
+IdentifierType: ['int']
+Compound:
+Decl: catn
+TypeDecl: catn
+IdentifierType: ['int']
+If:
+BinaryOp: ==
+ID: n
+Constant: 0
+Return:
+Constant: 1
+Compound:
+Assignment: =
+ID: catn
+FuncCall:
+ID: catalan
+ExprList:
+BinaryOp: -
+ID: n
+Constant: 1
+Assignment: =
+ID: ans
+BinaryOp: /
+BinaryOp: *
+BinaryOp: -
+BinaryOp: *
+Constant: 4
+ID: n
+Constant: 2
+ID: catn
+BinaryOp: +
+ID: n
+Constant: 1
+Assignment: =
+ID: sum
+BinaryOp: +
+ID: sum
+ID: ans
+Return:
+ID: ans
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: t
+TypeDecl: t
+IdentifierType: ['int']
+Constant: 0
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Constant: 0
+Decl: nrj
+TypeDecl: nrj
+IdentifierType: ['int']
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Constant: 15
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: t
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Assignment: =
+ID: nrj
+FuncCall:
+ID: catalan
+ExprList:
+ID: n
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+BinaryOp: +
+BinaryOp: -
+ID: sum
+ID: ans
+Constant: 1
+Assignment: =
+ID: sum
+Constant: 0
+Assignment: =
+ID: ans
+Constant: 0
+Return:
+Constant: 0

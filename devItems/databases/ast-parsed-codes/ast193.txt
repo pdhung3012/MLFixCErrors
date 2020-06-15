@@ -1,0 +1,94 @@
+FileAST
+Decl: divsr
+FuncDecl:
+ParamList:
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+TypeDecl: divsr
+IdentifierType: ['int']
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['int']
+Constant: 0
+FuncCall:
+ID: printf
+ExprList:
+ID: INT_MAX
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <
+ID: i
+ID: x
+UnaryOp: p++
+ID: i
+Compound:
+If:
+FuncCall:
+ID: divsr
+ExprList:
+ID: x
+ID: i
+Assignment: =
+ID: sum
+BinaryOp: +
+ID: sum
+ID: i
+If:
+BinaryOp: ==
+ID: sum
+ID: x
+FuncCall:
+ID: printf
+ExprList:
+Constant: "YES"
+FuncCall:
+ID: printf
+ExprList:
+Constant: "NO"
+Return:
+Constant: 0
+FuncDef:
+Decl: divsr
+FuncDecl:
+ParamList:
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+TypeDecl: b
+IdentifierType: ['int']
+TypeDecl: divsr
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: ||
+BinaryOp: ==
+ID: a
+ID: b
+BinaryOp: !=
+BinaryOp: %
+ID: a
+ID: b
+Constant: 0
+Return:
+Constant: 0
+Return:
+Constant: 1

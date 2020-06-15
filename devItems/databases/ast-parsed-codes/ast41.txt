@@ -1,0 +1,115 @@
+FileAST
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['int']
+Constant: 0
+Decl: f
+TypeDecl: f
+IdentifierType: ['int']
+Constant: 0
+FuncDef:
+Decl: hanoi
+FuncDecl:
+ParamList:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+TypeDecl: hanoi
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: ==
+ID: n
+Constant: 0
+Return:
+Constant: 0
+If:
+BinaryOp: ==
+ID: n
+Constant: 1
+Return:
+Constant: 1
+If:
+BinaryOp: ==
+BinaryOp: -
+ID: sum
+Constant: 1
+ID: k
+Assignment: =
+ID: f
+Constant: 1
+Assignment: =
+ID: sum
+BinaryOp: *
+FuncCall:
+ID: hanoi
+ExprList:
+BinaryOp: -
+ID: n
+Constant: 1
+ID: k
+Constant: 2
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d\t%dn"
+BinaryOp: -
+ID: sum
+Constant: 1
+ID: n
+Return:
+ID: sum
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: k
+FuncCall:
+ID: hanoi
+ExprList:
+Constant: 1000
+ID: k
+If:
+BinaryOp: ==
+ID: f
+Constant: 1
+FuncCall:
+ID: printf
+ExprList:
+Constant: "yesn"
+FuncCall:
+ID: printf
+ExprList:
+Constant: "non"
+Assignment: =
+ID: f
+Constant: 0
+Return:
+Constant: 0

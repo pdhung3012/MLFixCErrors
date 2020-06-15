@@ -1,0 +1,198 @@
+FileAST
+FuncDef:
+Decl: move
+FuncDecl:
+ParamList:
+Decl: From
+TypeDecl: From
+IdentifierType: ['char']
+Decl: To
+TypeDecl: To
+IdentifierType: ['char']
+TypeDecl: move
+IdentifierType: ['void']
+Compound:
+Decl: NumPerLine
+TypeDecl: NumPerLine
+IdentifierType: ['int']
+Constant: 8
+Decl: num
+TypeDecl: num
+IdentifierType: ['int']
+Constant: 0
+If:
+BinaryOp: ==
+BinaryOp: %
+ID: num
+ID: NumPerLine
+Constant: 0
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%5d: "
+ID: num
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: " "
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%c->%c"
+ID: From
+ID: To
+UnaryOp: p++
+ID: num
+FuncDef:
+Decl: getMov
+FuncDecl:
+ParamList:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: p
+TypeDecl: p
+IdentifierType: ['char']
+Decl: q
+TypeDecl: q
+IdentifierType: ['char']
+TypeDecl: getMov
+IdentifierType: ['void']
+Compound:
+Decl: r
+TypeDecl: r
+IdentifierType: ['char']
+Decl: c
+TypeDecl: c
+IdentifierType: ['char']
+If:
+BinaryOp: ||
+BinaryOp: &&
+BinaryOp: ==
+ID: p
+Constant: 'A'
+BinaryOp: ==
+ID: q
+Constant: 'B'
+BinaryOp: &&
+BinaryOp: ==
+ID: p
+Constant: 'B'
+BinaryOp: ==
+ID: q
+Constant: 'A'
+Compound:
+Assignment: =
+ID: r
+Constant: 'C'
+If:
+BinaryOp: ||
+BinaryOp: &&
+BinaryOp: ==
+ID: p
+Constant: 'A'
+BinaryOp: ==
+ID: q
+Constant: 'C'
+BinaryOp: &&
+BinaryOp: ==
+ID: p
+Constant: 'C'
+BinaryOp: ==
+ID: q
+Constant: 'A'
+Compound:
+Assignment: =
+ID: r
+Constant: 'B'
+If:
+BinaryOp: ||
+BinaryOp: &&
+BinaryOp: ==
+ID: p
+Constant: 'C'
+BinaryOp: ==
+ID: q
+Constant: 'B'
+BinaryOp: &&
+BinaryOp: ==
+ID: p
+Constant: 'B'
+BinaryOp: ==
+ID: q
+Constant: 'C'
+Compound:
+Assignment: =
+ID: r
+Constant: 'A'
+If:
+BinaryOp: ==
+ID: n
+Constant: 1
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: ==
+ID: p
+Constant: 'A'
+BinaryOp: ==
+ID: q
+Constant: 'C'
+Compound:
+FuncCall:
+ID: move
+ExprList:
+ID: p
+ID: r
+FuncCall:
+ID: move
+ExprList:
+ID: r
+ID: c
+FuncCall:
+ID: move
+ExprList:
+ID: p
+ID: q
+Compound:
+FuncCall:
+ID: getMov
+ExprList:
+BinaryOp: -
+ID: n
+Constant: 1
+ID: p
+ID: r
+FuncCall:
+ID: getMov
+ExprList:
+Constant: 1
+ID: p
+ID: q
+FuncCall:
+ID: getMov
+ExprList:
+BinaryOp: -
+ID: n
+Constant: 1
+ID: r
+ID: q
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Return:
+Constant: 0

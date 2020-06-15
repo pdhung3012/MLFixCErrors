@@ -1,0 +1,105 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: c
+TypeDecl: c
+IdentifierType: ['int']
+Decl: greatest
+TypeDecl: greatest
+IdentifierType: ['int']
+Constant: 0
+Decl: greateset
+TypeDecl: greateset
+IdentifierType: ['int']
+Decl: sum
+ArrayDecl:
+TypeDecl: sum
+IdentifierType: ['int']
+Constant: 1000
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: m
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: j
+ID: m
+UnaryOp: p++
+ID: j
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: c
+Assignment: =
+ArrayRef:
+ID: sum
+ID: i
+BinaryOp: +
+ArrayRef:
+ID: sum
+ID: i
+ID: c
+For:
+DeclList:
+Decl: l
+TypeDecl: l
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: l
+ID: n
+UnaryOp: p++
+ID: l
+Compound:
+If:
+BinaryOp: >
+ArrayRef:
+ID: sum
+ID: l
+ID: greatest
+Assignment: =
+ID: greatest
+ArrayRef:
+ID: sum
+ID: l
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: greateset
+Return:
+Constant: 0

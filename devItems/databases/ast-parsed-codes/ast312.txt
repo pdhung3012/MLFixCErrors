@@ -1,0 +1,147 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: E
+TypeDecl: E
+IdentifierType: ['double']
+Constant: 0.000001
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: interval
+TypeDecl: interval
+IdentifierType: ['double']
+Decl: subarea
+TypeDecl: subarea
+IdentifierType: ['double']
+Constant: 0
+Decl: diff
+TypeDecl: diff
+IdentifierType: ['double']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: key
+TypeDecl: key
+IdentifierType: ['int']
+Constant: 0
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf%lf%d"
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+UnaryOp: &
+ID: n
+Assignment: =
+ID: interval
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+While:
+BinaryOp: &&
+BinaryOp: <
+ID: key
+ID: n
+BinaryOp: <
+BinaryOp: +
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: diff
+ID: key
+Constant: 1
+ID: E
+Compound:
+Assignment: +=
+ID: subarea
+Constant: 1
+UnaryOp: p++
+ID: key
+While:
+BinaryOp: &&
+BinaryOp: &&
+BinaryOp: <
+ID: key
+ID: n
+BinaryOp: >
+BinaryOp: +
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: interval
+ID: key
+Constant: 1
+UnaryOp: -
+ID: E
+BinaryOp: <
+BinaryOp: -
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: interval
+ID: key
+Constant: 1
+ID: E
+Compound:
+Assignment: +=
+ID: subarea
+BinaryOp: *
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: interval
+ID: key
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: interval
+ID: key
+UnaryOp: p++
+ID: key
+While:
+BinaryOp: <
+ID: key
+ID: n
+Compound:
+Assignment: +=
+ID: subarea
+BinaryOp: *
+BinaryOp: *
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: interval
+ID: key
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: interval
+ID: key
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: interval
+ID: key
+UnaryOp: p++
+ID: key
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.4lf"
+BinaryOp: *
+ID: subarea
+ID: interval
+Return:
+Constant: 0

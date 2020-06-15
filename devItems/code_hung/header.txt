@@ -1,0 +1,10 @@
+scanf 
+scanf 
+scanf 
+printf 
+printf 
+scanf 
+scanf 
+scanf 
+printf 
+printf 

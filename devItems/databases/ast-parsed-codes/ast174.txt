@@ -1,0 +1,79 @@
+FileAST
+FuncDef:
+Decl: revarr
+FuncDecl:
+ParamList:
+Decl: arr
+ArrayDecl:
+TypeDecl: arr
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: revarr
+IdentifierType: ['int']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+If:
+BinaryOp: <
+ID: i
+Constant: 0
+Return:
+Constant: 0
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d "
+ArrayRef:
+ID: arr
+ID: i
+Return:
+FuncCall:
+ID: revarr
+ExprList:
+ID: arr
+BinaryOp: -
+ID: n
+Constant: 1
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: ar
+ArrayDecl:
+TypeDecl: ar
+IdentifierType: ['int']
+Constant: 10000
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: ar
+ID: i
+FuncCall:
+ID: revarr
+ExprList:
+ID: ar
+ID: n
+Return:
+Constant: 0

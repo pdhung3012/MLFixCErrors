@@ -1,0 +1,171 @@
+FileAST
+FuncDef:
+Decl: area
+FuncDecl:
+ParamList:
+Decl: c
+ArrayDecl:
+TypeDecl: c
+IdentifierType: ['float']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: area
+IdentifierType: ['float']
+Compound:
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['float']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: <=
+ArrayRef:
+ID: c
+ID: i
+UnaryOp: -
+Constant: 1
+Compound:
+Assignment: +=
+ID: sum
+BinaryOp: *
+UnaryOp: -
+Constant: 1
+ID: j
+Continue:
+If:
+BinaryOp: &&
+BinaryOp: >
+ArrayRef:
+ID: c
+ID: i
+UnaryOp: -
+Constant: 1
+BinaryOp: >
+ArrayRef:
+ID: c
+ID: i
+Constant: 1
+Compound:
+Assignment: +=
+ID: sum
+BinaryOp: *
+BinaryOp: *
+ArrayRef:
+ID: c
+ID: i
+ArrayRef:
+ID: c
+ID: i
+ID: j
+Continue:
+If:
+BinaryOp: >=
+ArrayRef:
+ID: c
+ID: i
+Constant: 1
+Compound:
+Assignment: +=
+ID: sum
+BinaryOp: *
+BinaryOp: *
+ArrayRef:
+ID: c
+ID: i
+ArrayRef:
+ID: c
+ID: i
+ArrayRef:
+ID: c
+ID: i
+Continue:
+Return:
+ID: sum
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: b
+TypeDecl: b
+IdentifierType: ['float']
+Decl: a
+TypeDecl: a
+IdentifierType: ['float']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%f%f%d"
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+UnaryOp: &
+ID: n
+Decl: j
+TypeDecl: j
+IdentifierType: ['float']
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+Decl: c
+ArrayDecl:
+TypeDecl: c
+IdentifierType: ['float']
+BinaryOp: +
+ID: n
+Constant: 1
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: c
+ID: i
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: i
+ID: j
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%f"
+FuncCall:
+ID: area
+ExprList:
+ID: c
+ID: n
+Return:
+Constant: 0

@@ -1,0 +1,89 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: ti
+TypeDecl: ti
+IdentifierType: ['int']
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+Decl: tax
+TypeDecl: tax
+IdentifierType: ['float']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: ti
+If:
+BinaryOp: >=
+ID: ti
+Constant: 200000
+FuncCall:
+ID: printf
+ExprList:
+Constant: "0"
+If:
+BinaryOp: &&
+BinaryOp: >=
+ID: ti
+Constant: 200001
+BinaryOp: <=
+ID: ti
+Constant: 500000
+Compound:
+Assignment: =
+ID: tax
+BinaryOp: *
+Constant: 0.1
+ID: a
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%0.2f"
+ID: tax
+If:
+BinaryOp: &&
+BinaryOp: >=
+ID: ti
+Constant: 500001
+BinaryOp: <=
+ID: ti
+Constant: 1000000
+Compound:
+Assignment: =
+ID: tax
+BinaryOp: +
+Constant: 30000
+BinaryOp: *
+Constant: 0.2
+ID: a
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%0.2f"
+ID: tax
+If:
+BinaryOp: >
+ID: ti
+Constant: 1000000
+Compound:
+Assignment: =
+ID: tax
+BinaryOp: +
+Constant: 130000
+BinaryOp: *
+Constant: 0.3
+ID: a
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%0.2f"
+ID: tax
+Return:
+Constant: 0

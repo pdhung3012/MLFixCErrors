@@ -1,0 +1,213 @@
+FileAST
+FuncDef:
+Decl: max
+FuncDecl:
+ParamList:
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+TypeDecl: b
+IdentifierType: ['int']
+TypeDecl: max
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: >
+ID: a
+ID: b
+Return:
+ID: a
+Return:
+ID: b
+FuncDef:
+Decl: min
+FuncDecl:
+ParamList:
+Decl: c
+TypeDecl: c
+IdentifierType: ['int']
+Decl: d
+TypeDecl: d
+IdentifierType: ['int']
+TypeDecl: min
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: <
+ID: c
+ID: d
+Return:
+ID: c
+Return:
+ID: d
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d%d"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: m
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+BinaryOp: +
+BinaryOp: *
+ID: m
+ID: n
+Constant: 1
+Decl: b
+ArrayDecl:
+TypeDecl: b
+IdentifierType: ['int']
+BinaryOp: +
+ID: m
+Constant: 1
+Assignment: =
+ArrayRef:
+ID: a
+Constant: 0
+Constant: 0
+Assignment: =
+ArrayRef:
+ID: b
+Constant: 0
+Constant: 0
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 1
+BinaryOp: <
+ID: i
+BinaryOp: +
+BinaryOp: *
+ID: m
+ID: n
+Constant: 1
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: a
+ID: i
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 1
+BinaryOp: <
+ID: j
+BinaryOp: +
+ID: m
+Constant: 1
+UnaryOp: p++
+ID: j
+Compound:
+Decl: c
+TypeDecl: c
+IdentifierType: ['int']
+ArrayRef:
+ID: a
+BinaryOp: +
+BinaryOp: *
+BinaryOp: -
+ID: j
+Constant: 1
+ID: n
+Constant: 1
+For:
+DeclList:
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+BinaryOp: +
+BinaryOp: *
+BinaryOp: -
+ID: j
+Constant: 1
+ID: n
+Constant: 1
+BinaryOp: <
+ID: k
+BinaryOp: +
+BinaryOp: *
+ID: j
+ID: n
+Constant: 1
+UnaryOp: p++
+ID: k
+Compound:
+Assignment: =
+ID: c
+FuncCall:
+ID: max
+ExprList:
+ID: c
+ArrayRef:
+ID: a
+ID: k
+Assignment: =
+ArrayRef:
+ID: b
+ID: j
+ID: c
+For:
+DeclList:
+Decl: g
+TypeDecl: g
+IdentifierType: ['int']
+Constant: 2
+BinaryOp: <
+ID: g
+BinaryOp: +
+ID: m
+Constant: 1
+UnaryOp: p++
+ID: g
+Compound:
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+ArrayRef:
+ID: b
+Constant: 1
+Assignment: =
+ID: x
+FuncCall:
+ID: min
+ExprList:
+ID: x
+ArrayRef:
+ID: b
+ID: g
+FuncCall:
+ID: pritnf
+ExprList:
+Constant: "%d"
+ID: x
+Return:
+Constant: 0

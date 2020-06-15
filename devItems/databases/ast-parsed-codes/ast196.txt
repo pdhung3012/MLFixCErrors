@@ -1,0 +1,83 @@
+FileAST
+FuncDef:
+Decl: sumdiv
+FuncDecl:
+ParamList:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: sumdiv
+IdentifierType: ['int']
+Compound:
+Decl: S
+TypeDecl: S
+IdentifierType: ['int']
+Assignment: =
+ID: S
+Constant: 0
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <
+ID: i
+BinaryOp: +
+BinaryOp: /
+ID: n
+Constant: 2
+Constant: 1
+Assignment: =
+ID: i
+BinaryOp: +
+ID: i
+Constant: 1
+Compound:
+If:
+BinaryOp: ==
+BinaryOp: %
+ID: n
+ID: i
+Constant: 0
+Compound:
+Assignment: =
+ID: S
+BinaryOp: +
+ID: S
+ID: i
+Return:
+ID: S
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: N
+TypeDecl: N
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: N
+If:
+BinaryOp: ==
+FuncCall:
+ID: sumdiv
+ExprList:
+ID: N
+ID: N
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "Yes"
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "No"
+Return:
+Constant: 0

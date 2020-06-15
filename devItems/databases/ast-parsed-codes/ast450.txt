@@ -1,0 +1,171 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['long']
+Decl: m
+TypeDecl: m
+IdentifierType: ['long']
+Decl: x
+TypeDecl: x
+IdentifierType: ['long']
+Decl: y
+TypeDecl: y
+IdentifierType: ['long']
+Decl: t
+TypeDecl: t
+IdentifierType: ['long']
+Constant: 0
+Decl: c
+PtrDecl:
+TypeDecl: c
+IdentifierType: ['long']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld"
+UnaryOp: &
+ID: n
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld"
+UnaryOp: &
+ID: m
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld"
+UnaryOp: &
+ID: x
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld"
+UnaryOp: &
+ID: y
+Decl: a
+PtrDecl:
+TypeDecl: a
+IdentifierType: ['long']
+Cast: None
+Typename: None
+TypeDecl: None
+IdentifierType: ['long']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: n
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['long']
+Decl: b
+PtrDecl:
+TypeDecl: b
+IdentifierType: ['long']
+Cast: None
+Typename: None
+TypeDecl: None
+IdentifierType: ['long']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: m
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['long']
+Decl: i
+TypeDecl: i
+IdentifierType: ['long']
+Decl: j
+TypeDecl: j
+IdentifierType: ['long']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+BinaryOp: +
+ID: a
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: m
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+BinaryOp: +
+ID: b
+ID: i
+While:
+BinaryOp: <
+ID: j
+ID: m
+Compound:
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: <=
+BinaryOp: <=
+BinaryOp: -
+UnaryOp: *
+BinaryOp: +
+ID: a
+ID: i
+ID: x
+UnaryOp: *
+BinaryOp: +
+ID: b
+ID: j
+BinaryOp: +
+UnaryOp: *
+BinaryOp: +
+ID: a
+ID: i
+ID: y
+Compound:
+Assignment: =
+UnaryOp: *
+BinaryOp: +
+ID: c
+ID: t
+ID: i
+UnaryOp: p++
+ID: t
+Break:
+UnaryOp: p++
+ID: j
+Return:
+Constant: 0

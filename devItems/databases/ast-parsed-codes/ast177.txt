@@ -1,0 +1,51 @@
+FileAST
+Decl: Reverse
+FuncDecl:
+TypeDecl: Reverse
+IdentifierType: ['void']
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: c
+TypeDecl: c
+IdentifierType: ['char']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%c"
+UnaryOp: &
+ID: c
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%c"
+ID: c
+FuncCall:
+ID: Reverse
+ExprList:
+ID: c
+Return:
+Constant: 0
+FuncDef:
+Decl: Reverse
+FuncDecl:
+TypeDecl: Reverse
+IdentifierType: ['void']
+Compound:
+Decl: c
+TypeDecl: c
+IdentifierType: ['char']
+Compound:
+FuncCall:
+ID: Reverse
+ExprList:
+ID: c
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%c"
+ID: c
+Return:

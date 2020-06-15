@@ -1,0 +1,112 @@
+FuncDef:
+FuncDecl:
+ParamList:
+TypeDecl: sum
+IdentifierType: ['int']
+TypeDecl: start
+IdentifierType: ['int']
+TypeDecl: end
+IdentifierType: ['int']
+TypeDecl: find_sum
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: ==
+ID: sum
+ArrayRef:
+ID: a
+ID: start
+Return:
+Constant: 0 : 1
+FuncCall:
+ID: find_sum
+ExprList:
+BinaryOp: -
+ID: sum
+ArrayRef:
+ID: a
+ID: start
+BinaryOp: +
+ID: start
+Constant: 0 : 1
+ID: end
+If:
+BinaryOp: ==
+ID: start
+ID: end
+Compound:
+Return:
+Constant: 0 : 0
+FuncDef:
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: 0 : "%d\n"
+UnaryOp: &
+ID: n ;initialized
+ID: n
+Decl: sum ;initialized
+TypeDecl: sum
+IdentifierType: ['int']
+Constant: 0 : 0
+For:
+DeclList:
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: 0 : "%d"
+UnaryOp: &
+ID: a ;initialized
+ArrayRef:
+ID: a
+ID: i
+For:
+DeclList:
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+ID: sum
+BinaryOp: +
+ID: sum
+ArrayRef:
+ID: a
+ID: i
+Assignment: =
+Decl: k ;initialized
+TypeDecl: k
+IdentifierType: ['int']
+BinaryOp: /
+ID: sum
+Constant: 0 : 2
+Decl: r ;initialized
+TypeDecl: r
+IdentifierType: ['int']
+FuncCall:
+ID: find_sum
+ExprList:
+ID: k
+Constant: 0 : 0
+BinaryOp: -
+ID: n
+Constant: 0 : 1
+Return:
+Constant: 0 : 0

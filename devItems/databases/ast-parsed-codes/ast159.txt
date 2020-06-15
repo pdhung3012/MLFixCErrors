@@ -1,0 +1,221 @@
+FileAST
+FuncDef:
+Decl: max
+FuncDecl:
+ParamList:
+Decl: k
+ArrayDecl:
+TypeDecl: k
+IdentifierType: ['int']
+Decl: b
+TypeDecl: b
+IdentifierType: ['int']
+TypeDecl: max
+IdentifierType: ['int']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: max
+TypeDecl: max
+IdentifierType: ['int']
+Constant: 0
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: b
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: >
+ArrayRef:
+ID: k
+ID: i
+ID: max
+Assignment: =
+ID: max
+ArrayRef:
+ID: k
+ID: i
+Return:
+ID: max
+FuncDef:
+Decl: check
+FuncDecl:
+ParamList:
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Decl: t
+TypeDecl: t
+IdentifierType: ['int']
+TypeDecl: check
+IdentifierType: ['int']
+Compound:
+Decl: ct
+ArrayDecl:
+TypeDecl: ct
+IdentifierType: ['int']
+Constant: 20
+Decl: tm
+ArrayDecl:
+TypeDecl: tm
+IdentifierType: ['int']
+Constant: 19
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: res
+TypeDecl: res
+IdentifierType: ['int']
+Decl: tmp
+TypeDecl: tmp
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+Assignment: =
+ArrayRef:
+ID: tm
+ID: i
+Constant: 1
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+Compound:
+For:
+DeclList:
+Decl: p
+TypeDecl: p
+IdentifierType: ['int']
+BinaryOp: <
+ID: p
+ID: t
+UnaryOp: p++
+ID: p
+Compound:
+Assignment: =
+ID: tmp
+ID: p
+For:
+Assignment: =
+ID: j
+BinaryOp: +
+ID: tmp
+Constant: 1
+BinaryOp: <
+ID: j
+ID: t
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: <
+ArrayRef:
+ID: a
+ID: tmp
+ArrayRef:
+ID: a
+ID: j
+Compound:
+UnaryOp: p++
+ArrayRef:
+ID: tm
+ID: p
+Assignment: =
+ID: tmp
+ID: j
+Assignment: =
+ArrayRef:
+ID: ct
+ID: i
+FuncCall:
+ID: max
+ExprList:
+ID: tm
+BinaryOp: -
+ID: t
+BinaryOp: +
+ID: i
+Constant: 1
+Assignment: =
+ID: res
+FuncCall:
+ID: max
+ExprList:
+ID: ct
+ID: t
+Return:
+ID: res
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: num
+ArrayDecl:
+TypeDecl: num
+IdentifierType: ['int']
+Constant: 20
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%dn"
+UnaryOp: &
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d "
+UnaryOp: &
+ArrayRef:
+ID: num
+ID: i
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%dn"
+FuncCall:
+ID: check
+ExprList:
+ID: num
+ID: n
+Return:
+Constant: 0

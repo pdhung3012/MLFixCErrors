@@ -1,0 +1,93 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: count
+TypeDecl: count
+IdentifierType: ['int']
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 0
+Decl: c
+TypeDecl: c
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+If:
+BinaryOp: ==
+BinaryOp: %
+ID: n
+ID: i
+Constant: 0
+Compound:
+Assignment: =
+ArrayRef:
+ID: a
+ID: j
+ID: i
+UnaryOp: p++
+ID: j
+Assignment: =
+ID: count
+ID: j
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <=
+ID: j
+ID: c
+UnaryOp: p++
+ID: j
+Assignment: =
+ID: sum
+BinaryOp: +
+ID: sum
+ArrayRef:
+ID: a
+ID: j
+If:
+BinaryOp: ==
+ID: n
+ID: sum
+FuncCall:
+ID: printf
+ExprList:
+Constant: "YES"
+FuncCall:
+ID: printf
+ExprList:
+Constant: "NO"
+Return:
+Constant: 0

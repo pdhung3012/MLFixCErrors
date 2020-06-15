@@ -1,0 +1,1 @@
+{'_nodetype': 'Decl','bitsize': null,'funcspec': [],'init': null,'name': 'i','quals': [],'storage': [],'type': {'_nodetype': 'TypeDecl','declname': 'i','quals': [],'type': {'_nodetype': 'IdentifierType','names': ['int']}}}

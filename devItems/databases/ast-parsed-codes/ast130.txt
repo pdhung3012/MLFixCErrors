@@ -1,0 +1,133 @@
+FileAST
+FuncDef:
+Decl: g
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+TypeDecl: g
+IdentifierType: ['double']
+Compound:
+Return:
+BinaryOp: -
+BinaryOp: -
+BinaryOp: *
+BinaryOp: *
+BinaryOp: *
+Constant: 2
+ID: x
+ID: x
+ID: x
+BinaryOp: *
+ID: x
+ID: x
+BinaryOp: *
+Constant: 5
+ID: x
+FuncDef:
+Decl: f
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+TypeDecl: f
+IdentifierType: ['double']
+Compound:
+Return:
+BinaryOp: +
+BinaryOp: *
+BinaryOp: *
+UnaryOp: -
+Constant: 1
+ID: x
+ID: x
+BinaryOp: *
+Constant: 3
+ID: x
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: w
+TypeDecl: w
+IdentifierType: ['double']
+Decl: area
+TypeDecl: area
+IdentifierType: ['double']
+Constant: 0
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf %lf %d"
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+UnaryOp: &
+ID: n
+Assignment: =
+ID: w
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Assignment: +=
+ID: area
+BinaryOp: *
+FuncCall:
+ID: abs
+ExprList:
+BinaryOp: -
+FuncCall:
+ID: g
+ExprList:
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: i
+ID: w
+FuncCall:
+ID: f
+ExprList:
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: i
+ID: w
+ID: x
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.4lf"
+ID: area
+Return:
+Constant: 0

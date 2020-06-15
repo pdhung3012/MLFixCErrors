@@ -1,0 +1,86 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: N
+TypeDecl: N
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: count
+TypeDecl: count
+IdentifierType: ['int']
+Constant: 0
+Decl: arr
+ArrayDecl:
+TypeDecl: arr
+IdentifierType: ['int']
+ID: N
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: N
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: m
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: N
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+BinaryOp: +
+ID: i
+Constant: 1
+BinaryOp: <
+ID: j
+ID: N
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: >
+ArrayRef:
+ID: arr
+ID: i
+ArrayRef:
+ID: arr
+ID: j
+Assignment: =
+ID: count
+BinaryOp: +
+ID: count
+Constant: 1
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d "
+ID: count
+Return:
+Constant: 0

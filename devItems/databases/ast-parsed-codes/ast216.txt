@@ -1,0 +1,171 @@
+FileAST
+Decl: arr
+ArrayDecl:
+TypeDecl: arr
+IdentifierType: ['int']
+Constant: 100
+InitList:
+Constant: 0
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncDef:
+Decl: getMaxLessThan
+FuncDecl:
+ParamList:
+Decl: upperLimit
+TypeDecl: upperLimit
+IdentifierType: ['int']
+TypeDecl: getMaxLessThan
+IdentifierType: ['int']
+Compound:
+Decl: max
+TypeDecl: max
+IdentifierType: ['int']
+Constant: 0
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: upperlimit
+TypeDecl: upperlimit
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: >
+ArrayRef:
+ID: arr
+ID: i
+ID: max
+BinaryOp: <=
+ArrayRef:
+ID: arr
+ID: i
+ID: upperlimit
+Assignment: =
+ID: max
+ArrayRef:
+ID: arr
+ID: i
+Return:
+ID: max
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: max
+TypeDecl: max
+IdentifierType: ['int']
+Constant: 0
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: choc
+ArrayDecl:
+TypeDecl: choc
+IdentifierType: ['int']
+ID: k
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: k
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: arr
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: >
+ArrayRef:
+ID: arr
+ID: i
+ID: max
+Assignment: =
+ID: max
+ArrayRef:
+ID: arr
+ID: i
+Assignment: =
+ArrayRef:
+ID: choc
+Constant: 0
+ID: max
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <
+ID: i
+ID: k
+UnaryOp: p++
+ID: i
+Assignment: =
+ArrayRef:
+ID: choc
+ID: i
+FuncCall:
+ID: getMaxLessThan
+ExprList:
+ArrayRef:
+ID: choc
+BinaryOp: -
+ID: i
+Constant: 1
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: k
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%dn"
+ArrayRef:
+ID: choc
+ID: i
+Return:
+Constant: 0

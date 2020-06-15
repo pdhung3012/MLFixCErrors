@@ -1,0 +1,235 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Decl: y
+TypeDecl: y
+IdentifierType: ['int']
+Decl: noofsol
+PtrDecl:
+TypeDecl: noofsol
+IdentifierType: ['int']
+Decl: noofvest
+PtrDecl:
+TypeDecl: noofvest
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: noovest
+PtrDecl:
+TypeDecl: noovest
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: m
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: x
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: y
+Assignment: =
+ID: noofsol
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: n
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+Assignment: =
+ID: noofvest
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: m
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+BinaryOp: +
+ID: noofsol
+ID: j
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: m
+UnaryOp: p++
+ID: j
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+BinaryOp: +
+ID: noofvest
+ID: j
+Decl: count
+TypeDecl: count
+IdentifierType: ['int']
+Constant: 0
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Constant: 0
+Decl: a
+ArrayDecl:
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Constant: 50
+Constant: 50
+Assignment: =
+ID: j
+Constant: 0
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: <=
+BinaryOp: -
+UnaryOp: *
+BinaryOp: +
+ID: noofsol
+ID: i
+ID: x
+UnaryOp: *
+BinaryOp: +
+ID: noofvest
+ID: j
+BinaryOp: >=
+BinaryOp: +
+UnaryOp: *
+BinaryOp: +
+ID: noofsol
+ID: i
+ID: y
+UnaryOp: *
+BinaryOp: +
+ID: noovest
+ID: j
+Compound:
+UnaryOp: p++
+ID: count
+Assignment: =
+ArrayRef:
+ArrayRef:
+ID: a
+ID: k
+Constant: 0
+BinaryOp: +
+ID: i
+Constant: 1
+Assignment: =
+ArrayRef:
+ArrayRef:
+ID: a
+ID: k
+Constant: 1
+BinaryOp: +
+ID: j
+Constant: 1
+UnaryOp: p++
+ID: k
+UnaryOp: p++
+ID: j
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: count
+For:
+Assignment: =
+ID: k
+Constant: 0
+BinaryOp: <
+ID: k
+ID: count
+UnaryOp: p++
+ID: k
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d"
+ArrayRef:
+ArrayRef:
+ID: a
+ID: k
+Constant: 0
+ArrayRef:
+ArrayRef:
+ID: a
+ID: k
+Constant: 1
+Return:
+Constant: 0

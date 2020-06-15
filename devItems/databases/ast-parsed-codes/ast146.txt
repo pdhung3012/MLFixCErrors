@@ -1,0 +1,178 @@
+FileAST
+Decl: F
+FuncDecl:
+ParamList:
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+TypeDecl: F
+IdentifierType: ['double']
+Decl: G
+FuncDecl:
+ParamList:
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+TypeDecl: G
+IdentifierType: ['double']
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf %lf %d"
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+UnaryOp: &
+ID: n
+Decl: x
+ArrayDecl:
+TypeDecl: x
+IdentifierType: ['double']
+ID: n
+Assignment: =
+ArrayRef:
+ID: x
+Constant: 0
+ID: a
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['double']
+Decl: del_x
+TypeDecl: del_x
+IdentifierType: ['double']
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <
+ID: i
+BinaryOp: -
+ID: n
+Constant: 1
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: +
+ArrayRef:
+ID: x
+Constant: 0
+BinaryOp: *
+ID: i
+ID: del_x
+Assignment: =
+ArrayRef:
+ID: x
+BinaryOp: -
+ID: n
+Constant: 1
+ID: b
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+Assignment: +=
+ID: sum
+BinaryOp: *
+FuncCall:
+ID: fabs
+ExprList:
+BinaryOp: -
+FuncCall:
+ID: F
+ExprList:
+ID: j
+FuncCall:
+ID: G
+ExprList:
+ID: j
+ID: del_x
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.4lf"
+ID: sum
+Return:
+Constant: 0
+FuncDef:
+Decl: F
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+TypeDecl: F
+IdentifierType: ['double']
+Compound:
+Return:
+BinaryOp: +
+UnaryOp: -
+BinaryOp: *
+ID: x
+ID: x
+BinaryOp: *
+Constant: 3
+ID: x
+FuncDef:
+Decl: G
+FuncDecl:
+ParamList:
+Decl: y
+TypeDecl: y
+IdentifierType: ['int']
+TypeDecl: G
+IdentifierType: ['double']
+Compound:
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Return:
+BinaryOp: -
+BinaryOp: -
+BinaryOp: *
+BinaryOp: *
+Constant: 2
+ID: y
+ID: y
+BinaryOp: *
+ID: x
+ID: x
+BinaryOp: *
+Constant: 5
+ID: x

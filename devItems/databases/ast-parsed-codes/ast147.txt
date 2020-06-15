@@ -1,0 +1,69 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: f
+TypeDecl: f
+IdentifierType: ['double']
+Decl: g
+TypeDecl: g
+IdentifierType: ['double']
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+Decl: dx
+TypeDecl: dx
+IdentifierType: ['double']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf %lf"
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+Assignment: =
+ID: f
+BinaryOp: +
+UnaryOp: -
+FuncCall:
+ID: pow
+ExprList:
+ID: x
+Constant: 2
+BinaryOp: *
+Constant: 3
+ID: x
+Assignment: =
+ID: g
+BinaryOp: -
+BinaryOp: -
+BinaryOp: *
+Constant: 2
+FuncCall:
+ID: pow
+ExprList:
+ID: x
+Constant: 3
+FuncCall:
+ID: pow
+ExprList:
+ID: x
+Constant: 2
+BinaryOp: *
+Constant: 5
+ID: x
+Return:
+Constant: 0

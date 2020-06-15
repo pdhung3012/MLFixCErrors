@@ -1,0 +1,59 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Constant: 100
+Decl: sum
+ArrayDecl:
+TypeDecl: sum
+IdentifierType: ['int']
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Assignment: =
+ArrayRef:
+ID: sum
+ID: i
+BinaryOp: +
+ArrayRef:
+ID: sum
+ID: i
+ID: i
+If:
+BinaryOp: ==
+ArrayRef:
+ID: sum
+ID: i
+ID: n
+FuncCall:
+ID: printf
+ExprList:
+Constant: "lucky"
+If:
+BinaryOp: !=
+ArrayRef:
+ID: sum
+ID: i
+ID: n
+FuncCall:
+ID: printf
+ExprList:
+Constant: "unlucky"
+Return:
+Constant: 0

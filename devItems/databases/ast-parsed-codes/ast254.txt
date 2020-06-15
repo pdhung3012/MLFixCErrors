@@ -1,0 +1,95 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: p
+TypeDecl: p
+IdentifierType: ['int']
+Decl: count
+TypeDecl: count
+IdentifierType: ['int']
+Constant: 0
+Decl: num
+TypeDecl: num
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+Constant: 1
+BinaryOp: <=
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: p
+If:
+BinaryOp: &&
+BinaryOp: &&
+BinaryOp: ==
+ID: i
+ID: j
+BinaryOp: ==
+ID: p
+Constant: 1
+BinaryOp: &&
+BinaryOp: !=
+ID: i
+ID: j
+BinaryOp: ==
+ID: p
+Constant: 0
+Assignment: =
+ID: count
+BinaryOp: +
+ID: count
+Constant: 1
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "n"
+If:
+BinaryOp: ==
+ID: count
+BinaryOp: *
+ID: num
+ID: num
+FuncCall:
+ID: printf
+ExprList:
+Constant: "GIVEN %dx%d matrix is an IDENTITY MATRIX"
+Return:
+Constant: 0

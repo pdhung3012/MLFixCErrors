@@ -1,0 +1,123 @@
+FileAST
+FuncDef:
+Decl: k_is_membr
+FuncDecl:
+ParamList:
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: k_is_membr
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: >=
+ID: n
+Constant: 0
+BinaryOp: <=
+ID: n
+Constant: 23
+Compound:
+If:
+BinaryOp: ==
+ID: k
+BinaryOp: -
+FuncCall:
+ID: pow
+ExprList:
+Constant: 2
+ID: n
+Constant: 1
+Compound:
+Return:
+Constant: 1
+Compound:
+Return:
+FuncCall:
+ID: k_is_membr
+ExprList:
+ID: k
+BinaryOp: -
+ID: n
+Constant: 1
+Return:
+Constant: 0
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: t
+TypeDecl: t
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%dn"
+UnaryOp: &
+ID: t
+Decl: A
+ArrayDecl:
+ArrayDecl:
+TypeDecl: A
+IdentifierType: ['int']
+Constant: 1
+Constant: 100
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%dn"
+UnaryOp: &
+ArrayRef:
+ArrayRef:
+ID: A
+ID: i
+Constant: 0
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+FuncCall:
+ID: k_is_membr
+ExprList:
+ArrayRef:
+ArrayRef:
+ID: A
+ID: i
+Constant: 0
+ID: n
+If:
+BinaryOp: ==
+ID: a
+Constant: 1
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "yes"
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "no"
+Return:
+Constant: 0

@@ -1,0 +1,167 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: luckn
+TypeDecl: luckn
+IdentifierType: ['int']
+Decl: len
+TypeDecl: len
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: list
+ArrayDecl:
+TypeDecl: list
+IdentifierType: ['int']
+Constant: 1001
+Decl: flag
+TypeDecl: flag
+IdentifierType: ['int']
+Constant: 0
+Decl: arr
+ArrayDecl:
+TypeDecl: arr
+IdentifierType: ['int']
+Constant: 501
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d%d"
+UnaryOp: &
+ID: luckn
+UnaryOp: &
+ID: len
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: len
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: list
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+Constant: 500
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: arr
+ID: i
+Constant: 0
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: len
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: ==
+ID: i
+ArrayRef:
+ID: list
+ID: j
+UnaryOp: p++
+ArrayRef:
+ID: arr
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ArrayRef:
+ID: arr
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+Constant: 500
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: len
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: ==
+ID: i
+ArrayRef:
+ID: list
+ID: j
+Compound:
+If:
+BinaryOp: !=
+ArrayRef:
+ID: arr
+BinaryOp: -
+ID: luckn
+ID: i
+Constant: 0
+Compound:
+Assignment: =
+ID: flag
+Constant: 1
+Break:
+If:
+BinaryOp: ==
+ID: flag
+Constant: 1
+FuncCall:
+ID: printf
+ExprList:
+Constant: "lucky"
+FuncCall:
+ID: printf
+ExprList:
+Constant: "unlucky"
+Return:
+Constant: 0

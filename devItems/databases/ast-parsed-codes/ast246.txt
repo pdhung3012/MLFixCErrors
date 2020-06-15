@@ -1,0 +1,69 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: j
+ArrayDecl:
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 20
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+FuncCall:
+ID: printf
+ExprList:
+Constant: "enter the value of n"
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <=
+ID: i
+Constant: 19
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: j
+ID: i
+If:
+BinaryOp: &&
+BinaryOp: >
+ArrayRef:
+ID: j
+ID: i
+ArrayRef:
+ID: j
+BinaryOp: -
+ID: i
+Constant: 1
+BinaryOp: >
+ArrayRef:
+ID: j
+ID: i
+ArrayRef:
+ID: j
+BinaryOp: +
+ID: i
+Constant: 1
+FuncCall:
+ID: printf
+ExprList:
+Constant: "yes"
+FuncCall:
+ID: printf
+ExprList:
+Constant: "no"
+Return:
+Constant: 0

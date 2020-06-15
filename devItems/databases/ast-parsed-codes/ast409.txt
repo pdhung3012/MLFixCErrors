@@ -1,0 +1,133 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: ptrt
+PtrDecl:
+TypeDecl: ptrt
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Constant: 0
+Decl: y
+TypeDecl: y
+IdentifierType: ['int']
+Constant: 0
+Decl: sum1
+TypeDecl: sum1
+IdentifierType: ['int']
+Constant: 0
+Decl: sum2
+TypeDecl: sum2
+IdentifierType: ['int']
+Constant: 0
+Decl: prt
+PtrDecl:
+TypeDecl: prt
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Assignment: =
+ID: ptrt
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['int']
+FuncCall:
+ID: calloc
+ExprList:
+ID: n
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+UnaryOp: *
+BinaryOp: +
+ID: ptrt
+ID: i
+Assignment: =
+ID: i
+Constant: 1
+Assignment: =
+ID: j
+ID: n
+While:
+BinaryOp: <=
+ID: i
+ID: j
+Compound:
+If:
+BinaryOp: >=
+BinaryOp: +
+ID: sum1
+UnaryOp: *
+BinaryOp: +
+ID: ptrt
+ID: i
+BinaryOp: +
+ID: sum2
+UnaryOp: *
+BinaryOp: +
+ID: prt
+ID: j
+UnaryOp: p++
+ID: x
+UnaryOp: p++
+ID: y
+Assignment: +=
+ID: sum1
+UnaryOp: *
+BinaryOp: +
+ID: ptrt
+ID: i
+Assignment: +=
+ID: sum2
+UnaryOp: *
+BinaryOp: +
+ID: ptrt
+ID: j
+UnaryOp: p++
+ID: i
+UnaryOp: p--
+ID: j
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d"
+ID: x
+ID: y
+Return:
+Constant: 0

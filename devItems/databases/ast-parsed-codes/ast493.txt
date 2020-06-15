@@ -1,0 +1,129 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: x1
+TypeDecl: x1
+IdentifierType: ['int']
+Decl: x2
+TypeDecl: x2
+IdentifierType: ['int']
+Decl: y1
+TypeDecl: y1
+IdentifierType: ['int']
+Decl: y2
+TypeDecl: y2
+IdentifierType: ['int']
+Decl: slope
+TypeDecl: slope
+IdentifierType: ['float']
+Decl: multiply
+TypeDecl: multiply
+IdentifierType: ['float']
+Decl: mulitply
+TypeDecl: mulitply
+IdentifierType: ['float']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: x1
+UnaryOp: &
+ID: y1
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: x2
+UnaryOp: &
+ID: y2
+If:
+BinaryOp: &&
+BinaryOp: &&
+BinaryOp: &&
+BinaryOp: &&
+BinaryOp: &&
+BinaryOp: &&
+BinaryOp: &&
+BinaryOp: &&
+BinaryOp: >=
+ID: x1
+UnaryOp: -
+Constant: 100
+BinaryOp: <=
+ID: x1
+Constant: 100
+BinaryOp: >=
+ID: y1
+UnaryOp: -
+Constant: 100
+BinaryOp: <=
+ID: y1
+Constant: 100
+BinaryOp: >=
+ID: x2
+UnaryOp: -
+Constant: 100
+BinaryOp: <=
+ID: x2
+Constant: 100
+BinaryOp: >=
+ID: y2
+UnaryOp: -
+Constant: 100
+BinaryOp: <=
+ID: y2
+Constant: 100
+BinaryOp: ||
+BinaryOp: ||
+BinaryOp: !=
+ID: x1
+ID: x2
+BinaryOp: !=
+ID: y1
+ID: y2
+BinaryOp: &&
+BinaryOp: !=
+ID: x1
+ID: x2
+BinaryOp: !=
+ID: y1
+ID: y2
+Compound:
+If:
+BinaryOp: !=
+BinaryOp: -
+ID: x1
+ID: x2
+Constant: 0
+Compound:
+Assignment: =
+ID: multiply
+BinaryOp: *
+BinaryOp: -
+ID: y1
+ID: y2
+Constant: 1.0
+Assignment: =
+ID: slope
+BinaryOp: /
+ID: mulitply
+BinaryOp: -
+ID: x1
+ID: x2
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.2f"
+ID: slope
+FuncCall:
+ID: printf
+ExprList:
+Constant: "inf"
+Return:
+Constant: 0

@@ -1,0 +1,101 @@
+FileAST
+FuncDef:
+Decl: catalan
+FuncDecl:
+ParamList:
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+TypeDecl: catalan
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+If:
+BinaryOp: ||
+BinaryOp: ==
+ID: a
+Constant: 1
+BinaryOp: ==
+ID: a
+Constant: 0
+Return:
+Constant: 1
+Return:
+BinaryOp: /
+BinaryOp: *
+BinaryOp: *
+Constant: 2
+BinaryOp: -
+BinaryOp: *
+Constant: 2
+ID: n
+Constant: 1
+FuncCall:
+ID: catalan
+ExprList:
+BinaryOp: -
+ID: n
+Constant: 1
+Cast: None
+Typename: None
+TypeDecl: None
+IdentifierType: ['float']
+BinaryOp: +
+ID: n
+Constant: 1
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+TypeDecl: b
+IdentifierType: ['int']
+Decl: count
+TypeDecl: count
+IdentifierType: ['int']
+Constant: 0
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: t
+TypeDecl: t
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: t
+While:
+BinaryOp: <
+ID: count
+ID: t
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: a
+Assignment: =
+ID: b
+FuncCall:
+ID: catalan
+ExprList:
+ID: a
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: b
+UnaryOp: p++
+ID: count
+Return:
+Constant: 0

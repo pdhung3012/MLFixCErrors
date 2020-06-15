@@ -1,0 +1,166 @@
+FileAST
+FuncDef:
+Decl: f
+FuncDecl:
+ParamList:
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+TypeDecl: f
+IdentifierType: ['double']
+Compound:
+Decl: z
+TypeDecl: z
+IdentifierType: ['double']
+If:
+BinaryOp: <=
+ID: x
+UnaryOp: -
+Constant: 1
+Compound:
+Decl: z
+TypeDecl: z
+IdentifierType: ['double']
+Constant: 1
+If:
+BinaryOp: &&
+BinaryOp: <
+UnaryOp: -
+Constant: 1
+ID: x
+BinaryOp: <
+ID: x
+Constant: 1
+Compound:
+Decl: z
+TypeDecl: z
+IdentifierType: ['double']
+BinaryOp: *
+ID: x
+ID: x
+If:
+BinaryOp: >=
+ID: x
+Constant: 1
+Compound:
+Decl: z
+TypeDecl: z
+IdentifierType: ['double']
+BinaryOp: *
+BinaryOp: *
+ID: x
+ID: x
+ID: x
+Return:
+ID: z
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: c
+ArrayDecl:
+TypeDecl: c
+IdentifierType: ['double']
+ID: n
+Decl: area
+TypeDecl: area
+IdentifierType: ['double']
+Constant: 0
+Decl: m
+TypeDecl: m
+IdentifierType: ['double']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf"
+UnaryOp: &
+ID: a
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf"
+UnaryOp: &
+ID: b
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <=
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: c
+ID: i
+BinaryOp: +
+ID: a
+BinaryOp: *
+ID: i
+BinaryOp: -
+ID: b
+ID: a
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+Decl: m
+TypeDecl: m
+IdentifierType: ['double']
+ArrayRef:
+ID: c
+ID: j
+Decl: s
+TypeDecl: s
+IdentifierType: ['double']
+BinaryOp: *
+FuncCall:
+ID: f
+ExprList:
+ID: m
+BinaryOp: -
+ID: b
+ID: a
+Assignment: =
+ID: area
+BinaryOp: +
+ID: area
+ID: s
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.4lf"
+ID: area
+Return:
+Constant: 0

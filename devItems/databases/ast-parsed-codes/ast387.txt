@@ -1,0 +1,200 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n1
+TypeDecl: n1
+IdentifierType: ['int']
+Constant: 0
+Decl: n2
+TypeDecl: n2
+IdentifierType: ['int']
+Constant: 0
+Decl: a1
+ArrayDecl:
+TypeDecl: a1
+IdentifierType: ['int']
+Constant: 19
+Decl: a2
+ArrayDecl:
+TypeDecl: a2
+IdentifierType: ['int']
+Constant: 19
+Decl: flag
+TypeDecl: flag
+IdentifierType: ['int']
+Constant: 0
+Decl: A
+ArrayDecl:
+TypeDecl: A
+IdentifierType: ['int']
+Constant: 19
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d "
+UnaryOp: &
+ID: n1
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n1
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: a1
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d "
+UnaryOp: &
+ID: n2
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n2
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: a2
+ID: i
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n1
+UnaryOp: p++
+ID: i
+Compound:
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: j
+BinaryOp: -
+ID: n1
+ID: i
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: >
+ArrayRef:
+ID: a1
+ID: j
+ArrayRef:
+ID: a1
+BinaryOp: +
+ID: j
+Constant: 1
+Compound:
+Decl: temp
+TypeDecl: temp
+IdentifierType: ['int']
+ArrayRef:
+ID: a1
+ID: j
+Assignment: =
+ArrayRef:
+ID: a1
+ID: j
+ArrayRef:
+ID: a1
+BinaryOp: +
+ID: j
+Constant: 1
+Assignment: =
+ArrayRef:
+ID: a1
+BinaryOp: +
+ID: j
+Constant: 1
+ID: temp
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 0
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n1
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: n2
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: ==
+ArrayRef:
+ID: a1
+ID: i
+ArrayRef:
+ID: a2
+ID: j
+Compound:
+Break:
+If:
+BinaryOp: ==
+ID: j
+BinaryOp: -
+ID: n2
+Constant: 1
+Compound:
+Assignment: =
+ID: flag
+Constant: 1
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ArrayRef:
+ID: A
+ID: j
+Return:
+Constant: 0

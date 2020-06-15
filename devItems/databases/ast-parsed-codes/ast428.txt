@@ -1,0 +1,261 @@
+FileAST
+FuncDef:
+Decl: comfortable
+FuncDecl:
+ParamList:
+Decl: a
+PtrDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+PtrDecl:
+TypeDecl: b
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Decl: y
+TypeDecl: y
+IdentifierType: ['int']
+TypeDecl: comfortable
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: <=
+BinaryOp: -
+UnaryOp: *
+BinaryOp: +
+ID: a
+ID: j
+ID: x
+UnaryOp: *
+BinaryOp: +
+ID: b
+ID: i
+BinaryOp: >=
+BinaryOp: +
+UnaryOp: *
+BinaryOp: +
+ID: a
+ID: j
+ID: y
+UnaryOp: *
+BinaryOp: +
+ID: b
+ID: i
+Return:
+Constant: 1
+Return:
+Constant: 0
+FuncDef:
+Decl: max_soldier
+FuncDecl:
+ParamList:
+Decl: a
+PtrDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+PtrDecl:
+TypeDecl: b
+IdentifierType: ['int']
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Decl: y
+TypeDecl: y
+IdentifierType: ['int']
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: start_a
+TypeDecl: start_a
+IdentifierType: ['int']
+Decl: start_b
+TypeDecl: start_b
+IdentifierType: ['int']
+TypeDecl: max_soldier
+IdentifierType: ['void']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: count
+TypeDecl: count
+IdentifierType: ['int']
+Constant: 0
+Decl: J
+TypeDecl: J
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+ID: start_b
+BinaryOp: <
+ID: i
+ID: m
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+ID: start_a
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+If:
+FuncCall:
+ID: comfortable
+ExprList:
+ID: a
+ID: b
+ID: i
+ID: j
+ID: x
+ID: y
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d"
+BinaryOp: +
+ID: J
+Constant: 1
+BinaryOp: +
+ID: i
+Constant: 1
+Assignment: =
+ID: start_a
+BinaryOp: +
+ID: j
+Constant: 1
+UnaryOp: p++
+ID: count
+Break:
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+Decl: y
+TypeDecl: y
+IdentifierType: ['int']
+Decl: a
+PtrDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Decl: b
+PtrDecl:
+TypeDecl: b
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d%d%d%d"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: m
+UnaryOp: &
+ID: x
+UnaryOp: &
+ID: y
+Assignment: =
+ID: a
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: n
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+Assignment: =
+ID: b
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: m
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+BinaryOp: +
+ID: a
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: m
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+BinaryOp: +
+ID: b
+ID: i
+FuncCall:
+ID: max_soldier
+ExprList:
+ID: a
+ID: b
+ID: x
+ID: y
+ID: n
+ID: m
+Constant: 0
+Constant: 0
+Return:
+Constant: 0

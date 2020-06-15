@@ -1,0 +1,112 @@
+FuncDef:
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: i
+IdentifierType: ['int']
+TypeDecl: res
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: 0 : "%d"
+UnaryOp: &
+ID: n ;initialized
+ID: n
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+ID: n
+For:
+ID: i
+Constant: 0 : 0
+Assignment: =
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: 0 : "%d"
+UnaryOp: &
+ID: a ;initialized
+ArrayRef:
+ID: a
+ID: i
+If:
+BinaryOp: ==
+ID: res
+Constant: 0 : 1
+FuncCall:
+ID: printf
+ExprList:
+Constant: 0 : "YES"
+FuncCall:
+ID: printf
+ExprList:
+Constant: 0 : "NO"
+FuncDef:
+FuncDecl:
+ParamList:
+TypeDecl: x
+IdentifierType: ['int']
+TypeDecl: y
+IdentifierType: ['int']
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+TypeDecl: n
+IdentifierType: ['int']
+TypeDecl: recall
+IdentifierType: ['int']
+Compound:
+If:
+BinaryOp: ==
+ID: n
+Constant: 0 : 0
+Compound:
+If:
+BinaryOp: ==
+ID: x
+ID: y
+Return:
+Constant: 0 : 1
+Return:
+Constant: 0 : 0
+Return:
+BinaryOp: ||
+FuncCall:
+ID: recall
+ExprList:
+BinaryOp: +
+ID: x
+ArrayRef:
+ID: a
+BinaryOp: -
+ID: n
+Constant: 0 : 1
+ID: y
+ID: a
+BinaryOp: -
+ID: n
+Constant: 0 : 1
+FuncCall:
+ID: recall
+ExprList:
+ID: x
+BinaryOp: +
+ID: y
+ArrayRef:
+ID: a
+BinaryOp: -
+ID: n
+Constant: 0 : 1
+ID: a
+BinaryOp: -
+ID: n
+Constant: 0 : 1

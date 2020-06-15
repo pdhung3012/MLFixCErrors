@@ -1,0 +1,209 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 0
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Constant: 0
+Decl: x
+TypeDecl: x
+IdentifierType: ['long', 'int']
+Decl: y
+TypeDecl: y
+IdentifierType: ['long', 'int']
+Decl: c
+PtrDecl:
+TypeDecl: c
+IdentifierType: ['long', 'int']
+Decl: b
+PtrDecl:
+TypeDecl: b
+IdentifierType: ['long', 'int']
+Decl: a
+PtrDecl:
+TypeDecl: a
+IdentifierType: ['long', 'int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d%d%ld%ld"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: m
+UnaryOp: &
+ID: x
+UnaryOp: &
+ID: y
+Assignment: =
+ID: b
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['long', 'int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: m
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['long', 'int']
+Decl: index
+ArrayDecl:
+ArrayDecl:
+TypeDecl: index
+IdentifierType: ['int']
+Constant: 2
+ID: m
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld"
+BinaryOp: +
+ID: c
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: ""
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: m
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld"
+BinaryOp: +
+ID: b
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+ID: k
+BinaryOp: <
+ID: j
+ID: m
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: <=
+BinaryOp: -
+ArrayRef:
+ID: c
+ID: i
+ID: x
+ArrayRef:
+ID: b
+ID: j
+BinaryOp: >=
+BinaryOp: +
+ArrayRef:
+ID: c
+ID: i
+ID: y
+ArrayRef:
+ID: b
+ID: j
+Compound:
+Assignment: =
+ArrayRef:
+ArrayRef:
+ID: index
+ID: k
+Constant: 0
+BinaryOp: +
+ID: i
+Constant: 1
+Assignment: =
+ArrayRef:
+ArrayRef:
+ID: index
+ID: k
+Constant: 1
+BinaryOp: +
+ID: j
+Constant: 1
+UnaryOp: p++
+ID: k
+UnaryOp: p++
+ID: j
+Break:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: k
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: k
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d"
+ArrayRef:
+ArrayRef:
+ID: index
+ID: i
+Constant: 0
+ArrayRef:
+ArrayRef:
+ID: index
+ID: i
+Constant: 1
+Return:
+Constant: 0

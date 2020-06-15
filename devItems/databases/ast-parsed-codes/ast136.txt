@@ -1,0 +1,240 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: sub
+TypeDecl: sub
+IdentifierType: ['double']
+Decl: f
+TypeDecl: f
+IdentifierType: ['double']
+Decl: g
+TypeDecl: g
+IdentifierType: ['double']
+Decl: area
+TypeDecl: area
+IdentifierType: ['double']
+Decl: x
+ArrayDecl:
+TypeDecl: x
+IdentifierType: ['double']
+Constant: 1000
+Assignment: =
+ID: area
+Constant: 0
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf"
+UnaryOp: &
+ID: a
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf"
+UnaryOp: &
+ID: b
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Assignment: =
+ID: sub
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+Assignment: =
+ArrayRef:
+ID: x
+Constant: 0
+ID: a
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: +
+ArrayRef:
+ID: x
+BinaryOp: -
+ID: i
+Constant: 1
+ID: sub
+Assignment: =
+ID: f
+BinaryOp: +
+UnaryOp: -
+BinaryOp: *
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: *
+Constant: 3
+ArrayRef:
+ID: x
+ID: i
+Assignment: =
+ID: g
+BinaryOp: -
+BinaryOp: -
+BinaryOp: *
+Constant: 2
+BinaryOp: *
+BinaryOp: *
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: *
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: *
+Constant: 5
+ArrayRef:
+ID: x
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: <=
+ArrayRef:
+ID: x
+ID: i
+Constant: 0
+Compound:
+Assignment: =
+ID: area
+BinaryOp: +
+ID: area
+BinaryOp: *
+BinaryOp: +
+BinaryOp: +
+BinaryOp: *
+UnaryOp: -
+Constant: 3
+BinaryOp: *
+BinaryOp: *
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: *
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: *
+Constant: 8
+ArrayRef:
+ID: x
+ID: i
+ID: sub
+Compound:
+Break:
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+BinaryOp: <
+ID: j
+ID: n
+UnaryOp: p++
+ID: j
+Compound:
+Assignment: =
+ID: area
+BinaryOp: +
+ID: area
+BinaryOp: *
+BinaryOp: +
+BinaryOp: +
+BinaryOp: *
+UnaryOp: -
+Constant: 3
+BinaryOp: *
+BinaryOp: *
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: *
+ArrayRef:
+ID: x
+ID: i
+ArrayRef:
+ID: x
+ID: i
+BinaryOp: *
+Constant: 8
+ArrayRef:
+ID: x
+ID: i
+ID: sub
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%lf"
+ID: area
+Return:
+Constant: 0

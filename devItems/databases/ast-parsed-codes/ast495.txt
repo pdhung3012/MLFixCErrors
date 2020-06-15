@@ -1,0 +1,110 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: x1
+TypeDecl: x1
+IdentifierType: ['int']
+Decl: y1
+TypeDecl: y1
+IdentifierType: ['int']
+Decl: xi
+TypeDecl: xi
+IdentifierType: ['int']
+Decl: x2
+TypeDecl: x2
+IdentifierType: ['int']
+Decl: y2
+TypeDecl: y2
+IdentifierType: ['int']
+Decl: c
+TypeDecl: c
+IdentifierType: ['int']
+Decl: d
+TypeDecl: d
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['float']
+Constant: 0
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: x1
+UnaryOp: &
+ID: y1
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: x2
+UnaryOp: &
+ID: y2
+Assignment: =
+ID: c
+BinaryOp: -
+ID: y2
+ID: y1
+Assignment: =
+ID: d
+BinaryOp: -
+ID: x2
+ID: x1
+If:
+BinaryOp: &&
+BinaryOp: >=
+BinaryOp: +
+BinaryOp: +
+BinaryOp: +
+ID: x1
+ID: x2
+ID: y1
+ID: y2
+UnaryOp: -
+Constant: 400
+BinaryOp: <=
+BinaryOp: +
+BinaryOp: +
+BinaryOp: +
+ID: x1
+ID: x2
+ID: y1
+ID: y2
+Constant: 400
+Compound:
+If:
+BinaryOp: ||
+BinaryOp: !=
+ID: xi
+ID: x2
+BinaryOp: !=
+ID: y1
+ID: y2
+Compound:
+If:
+BinaryOp: ==
+ID: x1
+ID: x2
+FuncCall:
+ID: printf
+ExprList:
+Constant: "inf"
+Compound:
+Assignment: =
+ID: m
+BinaryOp: /
+ID: c
+ID: d
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.2f"
+ID: m
+Return:
+Constant: 0

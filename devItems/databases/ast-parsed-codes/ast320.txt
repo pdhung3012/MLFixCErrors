@@ -1,0 +1,139 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: a
+TypeDecl: a
+IdentifierType: ['double']
+Decl: b
+TypeDecl: b
+IdentifierType: ['double']
+Decl: x
+TypeDecl: x
+IdentifierType: ['double']
+Decl: ar1
+TypeDecl: ar1
+IdentifierType: ['double']
+Constant: 0
+Decl: ar2
+TypeDecl: ar2
+IdentifierType: ['double']
+Constant: 0
+Decl: ar3
+TypeDecl: ar3
+IdentifierType: ['double']
+Constant: 0
+Decl: area
+TypeDecl: area
+IdentifierType: ['double']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%lf%lf"
+UnaryOp: &
+ID: a
+UnaryOp: &
+ID: b
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 1
+BinaryOp: <=
+ID: i
+ID: n
+Assignment: =
+ID: i
+BinaryOp: +
+ID: i
+Constant: 1
+Compound:
+Assignment: =
+ID: x
+BinaryOp: /
+BinaryOp: *
+ID: i
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+If:
+BinaryOp: <=
+ID: x
+UnaryOp: -
+Constant: 1
+Compound:
+Assignment: =
+ID: ar1
+BinaryOp: +
+ID: ar1
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+If:
+BinaryOp: &&
+BinaryOp: >
+ID: x
+UnaryOp: -
+Constant: 1
+BinaryOp: <
+ID: x
+Constant: 1
+Compound:
+Assignment: =
+ID: ar2
+BinaryOp: +
+ID: ar2
+BinaryOp: *
+BinaryOp: *
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+ID: x
+ID: x
+If:
+BinaryOp: >=
+ID: x
+Constant: 1
+Compound:
+Assignment: =
+ID: ar3
+BinaryOp: +
+ID: ar3
+BinaryOp: *
+BinaryOp: *
+BinaryOp: *
+BinaryOp: /
+BinaryOp: -
+ID: b
+ID: a
+ID: n
+ID: x
+ID: x
+ID: x
+Assignment: =
+ID: area
+BinaryOp: +
+BinaryOp: +
+ID: ar1
+ID: ar2
+ID: ar3
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%lf"
+ID: area
+Return:
+Constant: 0

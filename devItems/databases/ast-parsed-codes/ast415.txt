@@ -1,0 +1,173 @@
+FileAST
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncDef:
+Decl: aliceBars
+FuncDecl:
+ParamList:
+Decl: ptr
+PtrDecl:
+TypeDecl: ptr
+IdentifierType: ['int']
+TypeDecl: aliceBars
+IdentifierType: ['int']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+BinaryOp: -
+ID: n
+Constant: 1
+While:
+BinaryOp: <
+ID: i
+ID: j
+Compound:
+If:
+BinaryOp: ==
+UnaryOp: *
+BinaryOp: +
+ID: ptr
+ID: i
+Constant: 0
+UnaryOp: p++
+ID: i
+If:
+BinaryOp: ==
+UnaryOp: *
+BinaryOp: +
+ID: ptr
+ID: j
+Constant: 0
+UnaryOp: p--
+ID: j
+If:
+BinaryOp: <
+UnaryOp: *
+BinaryOp: +
+ID: ptr
+ID: i
+UnaryOp: *
+BinaryOp: +
+ID: ptr
+ID: j
+Compound:
+Assignment: =
+UnaryOp: *
+BinaryOp: +
+ID: ptr
+ID: j
+BinaryOp: -
+UnaryOp: *
+BinaryOp: +
+ID: ptr
+ID: j
+UnaryOp: *
+BinaryOp: +
+ID: ptr
+ID: i
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+UnaryOp: *
+BinaryOp: +
+ID: ptr
+ID: i
+BinaryOp: -
+UnaryOp: *
+BinaryOp: +
+ID: ptr
+ID: i
+UnaryOp: *
+BinaryOp: +
+ID: ptr
+ID: j
+UnaryOp: p--
+ID: j
+If:
+BinaryOp: ==
+ID: i
+ID: j
+UnaryOp: p++
+ID: i
+Return:
+BinaryOp: +
+ID: i
+Constant: 1
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: alice
+TypeDecl: alice
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Decl: ptr
+PtrDecl:
+TypeDecl: ptr
+IdentifierType: ['int']
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: n
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: ptr
+ID: i
+Decl: Alice
+TypeDecl: Alice
+IdentifierType: ['int']
+FuncCall:
+ID: aliceBars
+ExprList:
+ID: ptr
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d"
+ID: alice
+BinaryOp: -
+ID: n
+ID: alice
+Return:
+Constant: 0

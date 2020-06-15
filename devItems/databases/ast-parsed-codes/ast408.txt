@@ -1,0 +1,186 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+Decl: a
+PtrDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Assignment: =
+ID: a
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: n
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['int']
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+ArrayRef:
+ID: a
+ID: i
+Decl: c1
+TypeDecl: c1
+IdentifierType: ['int']
+Constant: 0
+Decl: c2
+TypeDecl: c2
+IdentifierType: ['int']
+BinaryOp: -
+ID: n
+Constant: 1
+Decl: t1
+TypeDecl: t1
+IdentifierType: ['int']
+ArrayRef:
+ID: a
+ID: c1
+Decl: t2
+TypeDecl: t2
+IdentifierType: ['int']
+ArrayRef:
+ID: a
+ID: c2
+Decl: c
+TypeDecl: c
+IdentifierType: ['int']
+Constant: 0
+While:
+BinaryOp: <=
+BinaryOp: +
+ID: c1
+Constant: 1
+BinaryOp: -
+ID: c2
+Constant: 1
+Compound:
+UnaryOp: p++
+ID: c
+If:
+BinaryOp: >
+ID: t1
+ID: t2
+Compound:
+UnaryOp: p--
+ID: c2
+Assignment: =
+ID: t2
+BinaryOp: +
+ID: t2
+ArrayRef:
+ID: a
+ID: c2
+If:
+BinaryOp: &&
+BinaryOp: ==
+ID: t1
+ID: t2
+BinaryOp: !=
+BinaryOp: +
+ID: c1
+Constant: 1
+BinaryOp: -
+ID: c2
+Constant: 1
+Compound:
+UnaryOp: p--
+ID: c2
+UnaryOp: p++
+ID: c1
+Assignment: =
+ID: t1
+BinaryOp: +
+ID: t1
+ArrayRef:
+ID: a
+ID: c1
+Assignment: =
+ID: t2
+BinaryOp: +
+ID: t2
+ArrayRef:
+ID: a
+ID: c2
+If:
+BinaryOp: &&
+BinaryOp: ==
+ID: t1
+ID: t2
+BinaryOp: ==
+BinaryOp: +
+ID: c1
+Constant: 1
+BinaryOp: -
+ID: c2
+Constant: 1
+Compound:
+UnaryOp: p++
+ID: c1
+Assignment: =
+ID: t1
+BinaryOp: +
+ID: t1
+ArrayRef:
+ID: a
+ID: c1
+Compound:
+UnaryOp: p++
+ID: c1
+Assignment: =
+ID: t1
+BinaryOp: +
+ID: t1
+ArrayRef:
+ID: a
+ID: c1
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d %d %d %d"
+BinaryOp: +
+ID: c1
+Constant: 1
+BinaryOp: -
+ID: n
+ID: c2
+ID: t1
+ID: t2
+FuncCall:
+ID: free
+ExprList:
+ID: a
+Return:
+Constant: 0

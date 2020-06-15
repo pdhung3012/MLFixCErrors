@@ -1,0 +1,68 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: ti
+TypeDecl: ti
+IdentifierType: ['int']
+Decl: a
+TypeDecl: a
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: ti
+If:
+BinaryOp: <=
+ID: a
+Constant: 200000
+FuncCall:
+ID: printf
+ExprList:
+Constant: "0.00"
+If:
+BinaryOp: <=
+ID: a
+Constant: 500000
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.2f"
+BinaryOp: *
+Constant: 0.1
+BinaryOp: -
+ID: ti
+Constant: 200000
+If:
+BinaryOp: <=
+ID: a
+Constant: 1000000
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.2f"
+BinaryOp: +
+Constant: 30000
+BinaryOp: *
+Constant: 0.2
+BinaryOp: -
+ID: ti
+Constant: 500000
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%.2f"
+BinaryOp: +
+Constant: 130000
+BinaryOp: *
+Constant: 0.3
+BinaryOp: -
+ID: ti
+Constant: 1000000
+Return:
+Constant: 0

@@ -1,0 +1,59 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['long', 'int']
+Decl: s
+TypeDecl: s
+IdentifierType: ['long', 'int']
+Constant: 0
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld"
+UnaryOp: &
+ID: n
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: ==
+BinaryOp: %
+ID: n
+ID: i
+Constant: 0
+Compound:
+Assignment: =
+ID: s
+BinaryOp: +
+ID: s
+ID: i
+If:
+BinaryOp: ==
+ID: n
+ID: s
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "YES"
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "NO"
+Return:
+Constant: 0

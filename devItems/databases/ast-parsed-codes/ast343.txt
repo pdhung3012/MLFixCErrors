@@ -1,0 +1,182 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: m
+Decl: mat
+ArrayDecl:
+ArrayDecl:
+TypeDecl: mat
+IdentifierType: ['int']
+ID: n
+ID: m
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <=
+ID: i
+BinaryOp: -
+ID: m
+Constant: 1
+UnaryOp: p++
+ID: i
+Compound:
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+BinaryOp: <=
+ID: j
+BinaryOp: -
+ID: n
+Constant: 1
+UnaryOp: p++
+ID: j
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ArrayRef:
+ID: mat
+ID: i
+ID: j
+Decl: max
+ArrayDecl:
+TypeDecl: max
+IdentifierType: ['int']
+ID: m
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <=
+ID: i
+BinaryOp: -
+ID: m
+Constant: 1
+UnaryOp: p++
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: max
+ID: i
+ArrayRef:
+ArrayRef:
+ID: mat
+ID: i
+Constant: 0
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <=
+ID: i
+BinaryOp: -
+ID: m
+Constant: 1
+UnaryOp: p++
+ID: i
+Compound:
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <=
+ID: j
+BinaryOp: -
+ID: n
+Constant: 1
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: >
+ArrayRef:
+ArrayRef:
+ID: mat
+ID: i
+ID: j
+ArrayRef:
+ID: max
+ID: i
+Assignment: =
+ArrayRef:
+ID: max
+ID: i
+ArrayRef:
+ArrayRef:
+ID: mat
+ID: i
+ID: j
+Decl: min
+TypeDecl: min
+IdentifierType: ['int']
+ArrayRef:
+ID: max
+Constant: 0
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <=
+ID: i
+BinaryOp: -
+ID: m
+Constant: 1
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: <
+ArrayRef:
+ID: max
+ID: i
+ID: min
+Assignment: =
+ID: min
+ArrayRef:
+ID: max
+ID: i
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: min
+Return:
+Constant: 0

@@ -1,0 +1,90 @@
+FileAST
+FuncDef:
+Decl: digit_sum
+FuncDecl:
+ParamList:
+Decl: num
+TypeDecl: num
+IdentifierType: ['int']
+TypeDecl: digit_sum
+IdentifierType: ['int']
+Compound:
+Decl: rem
+TypeDecl: rem
+IdentifierType: ['int']
+Decl: sum
+TypeDecl: sum
+IdentifierType: ['int']
+While:
+BinaryOp: !=
+ID: num
+Constant: 0
+Compound:
+Assignment: =
+ID: rem
+BinaryOp: %
+ID: num
+Constant: 10
+Assignment: =
+ID: sum
+BinaryOp: +
+ID: sum
+ID: rem
+Assignment: =
+ID: num
+BinaryOp: /
+ID: num
+Constant: 10
+Return:
+ID: sum
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: num
+TypeDecl: num
+IdentifierType: ['int']
+Decl: test
+TypeDecl: test
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: num
+Assignment: =
+ID: test
+FuncCall:
+ID: digit_sum
+ExprList:
+ID: num
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: <=
+ID: i
+Constant: 2100
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: ==
+FuncCall:
+ID: digit_sum
+ExprList:
+ID: i
+ID: test
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: i
+Break:
+Return:
+Constant: 0

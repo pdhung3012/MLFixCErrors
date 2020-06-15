@@ -1,0 +1,97 @@
+FileAST
+FuncDef:
+Decl: series
+FuncDecl:
+ParamList:
+Decl: disc
+TypeDecl: disc
+IdentifierType: ['int']
+TypeDecl: series
+IdentifierType: ['long', 'int']
+Compound:
+Decl: steps
+TypeDecl: steps
+IdentifierType: ['int']
+If:
+BinaryOp: ==
+ID: disc
+Constant: 0
+Compound:
+Return:
+Constant: 0
+If:
+BinaryOp: ==
+ID: disc
+Constant: 1
+Compound:
+Return:
+Constant: 1
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: t
+TypeDecl: t
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: k
+TypeDecl: k
+IdentifierType: ['long', 'int']
+Decl: steps
+TypeDecl: steps
+IdentifierType: ['long', 'int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%dn"
+UnaryOp: &
+ID: t
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: t
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ldn"
+UnaryOp: &
+ID: k
+Assignment: =
+ID: j
+Constant: 0
+DoWhile:
+BinaryOp: <
+ID: steps
+ID: k
+Compound:
+UnaryOp: p++
+ID: j
+If:
+BinaryOp: ==
+ID: steps
+ID: k
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "yesn"
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "non"
+Return:
+Constant: 0

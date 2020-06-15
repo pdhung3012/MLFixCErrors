@@ -1,0 +1,177 @@
+FileAST
+Decl: arr
+ArrayDecl:
+TypeDecl: arr
+IdentifierType: ['int']
+Constant: 100
+InitList:
+Constant: 0
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncDef:
+Decl: getMaxLessThan
+FuncDecl:
+ParamList:
+Decl: upperLimit
+TypeDecl: upperLimit
+IdentifierType: ['int']
+TypeDecl: getMaxLessThan
+IdentifierType: ['int']
+Compound:
+Decl: max
+TypeDecl: max
+IdentifierType: ['int']
+Constant: 0
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: >
+ArrayRef:
+ID: arr
+ID: i
+ID: max
+BinaryOp: <
+ArrayRef:
+ID: arr
+ID: i
+ID: upperLimit
+Compound:
+Assignment: =
+ID: max
+ArrayRef:
+ID: arr
+ID: i
+Return:
+ID: max
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: maxm
+TypeDecl: maxm
+IdentifierType: ['int']
+Constant: 0
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: k
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: arr
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: >
+ArrayRef:
+ID: arr
+ID: i
+ID: maxm
+Compound:
+Assignment: =
+ID: maxm
+ArrayRef:
+ID: arr
+ID: i
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: maxm
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Constant: 0
+If:
+BinaryOp: &&
+BinaryOp: >
+ArrayRef:
+ID: arr
+ID: i
+ID: m
+BinaryOp: <
+ArrayRef:
+ID: arr
+ID: i
+ID: maxm
+Compound:
+Assignment: =
+ID: m
+ArrayRef:
+ID: arr
+ID: i
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+FuncCall:
+ID: getMaxLessThan
+ExprList:
+ID: maxm
+Assignment: =
+ID: maxm
+ID: m
+Return:
+Constant: 0

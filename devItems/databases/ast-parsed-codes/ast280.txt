@@ -1,0 +1,163 @@
+FileAST
+Decl: arr
+ArrayDecl:
+TypeDecl: arr
+IdentifierType: ['int']
+Constant: 100
+InitList:
+Constant: 0
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+FuncDef:
+Decl: getMaxLessThan
+FuncDecl:
+ParamList:
+Decl: upperLimit
+TypeDecl: upperLimit
+IdentifierType: ['int']
+TypeDecl: getMaxLessThan
+IdentifierType: ['int']
+Compound:
+Decl: max
+TypeDecl: max
+IdentifierType: ['int']
+Decl: upperlimit
+TypeDecl: upperlimit
+IdentifierType: ['int']
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+BinaryOp: -
+ID: n
+Constant: 1
+BinaryOp: >=
+ID: i
+Constant: 0
+UnaryOp: p--
+ID: i
+Compound:
+If:
+BinaryOp: <
+ArrayRef:
+ID: arr
+ID: i
+ID: upperlimit
+Compound:
+Assignment: =
+ID: max
+ArrayRef:
+ID: arr
+ID: i
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 1
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+If:
+BinaryOp: &&
+BinaryOp: >
+ArrayRef:
+ID: arr
+ID: i
+ID: max
+BinaryOp: <=
+ArrayRef:
+ID: arr
+ID: i
+ID: upperlimit
+Compound:
+Assignment: =
+ID: max
+ArrayRef:
+ID: arr
+ID: i
+Return:
+ID: max
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: k
+TypeDecl: k
+IdentifierType: ['int']
+Decl: ncalls
+TypeDecl: ncalls
+IdentifierType: ['int']
+Constant: 0
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: k
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: arr
+ID: i
+Decl: x
+TypeDecl: x
+IdentifierType: ['int']
+FuncCall:
+ID: getMaxLessThan
+ExprList:
+Constant: 1000
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: x
+While:
+BinaryOp: <
+ID: ncalls
+ID: k
+Compound:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d/n"
+FuncCall:
+ID: getMaxLessThan
+ExprList:
+UnaryOp: p--
+ID: x
+Assignment: =
+ID: x
+FuncCall:
+ID: getMaxLessThan
+ExprList:
+UnaryOp: p--
+ID: x
+UnaryOp: p++
+ID: ncalls
+Return:
+Constant: 0

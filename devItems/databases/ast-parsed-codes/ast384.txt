@@ -1,0 +1,183 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n1
+TypeDecl: n1
+IdentifierType: ['int']
+Decl: n2
+TypeDecl: n2
+IdentifierType: ['int']
+Decl: a1
+ArrayDecl:
+TypeDecl: a1
+IdentifierType: ['int']
+Constant: 20
+Decl: a2
+ArrayDecl:
+TypeDecl: a2
+IdentifierType: ['int']
+Constant: 20
+Decl: a
+ArrayDecl:
+TypeDecl: a
+IdentifierType: ['int']
+Constant: 20
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n1
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n1
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: a1
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ID: n2
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n2
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d"
+UnaryOp: &
+ArrayRef:
+ID: a2
+ID: i
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+TernaryOp:
+BinaryOp: >
+ID: n1
+ID: n2
+ID: n2
+ID: n1
+Decl: c
+ArrayDecl:
+TypeDecl: c
+IdentifierType: ['int']
+Constant: 20
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Assignment: =
+ArrayRef:
+ID: c
+ID: i
+Constant: 0
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n1
+UnaryOp: p++
+ID: i
+Compound:
+Decl: flag
+TypeDecl: flag
+IdentifierType: ['int']
+Constant: 0
+For:
+DeclList:
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: j
+ID: n2
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: ==
+ArrayRef:
+ID: a2
+ID: j
+ArrayRef:
+ID: a1
+ID: i
+Compound:
+Assignment: =
+ArrayRef:
+ID: c
+ID: i
+Constant: 0
+Assignment: =
+ID: flag
+Constant: 1
+Break:
+If:
+BinaryOp: ==
+ID: flag
+Constant: 0
+Assignment: =
+ArrayRef:
+ID: c
+ID: i
+ArrayRef:
+ID: a
+ID: i
+For:
+DeclList:
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ArrayRef:
+ID: c
+ID: i

@@ -1,0 +1,196 @@
+FileAST
+FuncDef:
+Decl: main
+FuncDecl:
+TypeDecl: main
+IdentifierType: ['int']
+Compound:
+Decl: n
+TypeDecl: n
+IdentifierType: ['int']
+Decl: m
+TypeDecl: m
+IdentifierType: ['int']
+Decl: i
+TypeDecl: i
+IdentifierType: ['int']
+Decl: j
+TypeDecl: j
+IdentifierType: ['int']
+Decl: p
+TypeDecl: p
+IdentifierType: ['int']
+Constant: 0
+Decl: x
+TypeDecl: x
+IdentifierType: ['long', 'int']
+Decl: y
+TypeDecl: y
+IdentifierType: ['long', 'int']
+Decl: size
+PtrDecl:
+TypeDecl: size
+IdentifierType: ['long', 'int']
+Decl: vest
+PtrDecl:
+TypeDecl: vest
+IdentifierType: ['long', 'int']
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%d %d"
+UnaryOp: &
+ID: n
+UnaryOp: &
+ID: m
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld ld"
+UnaryOp: &
+ID: x
+UnaryOp: &
+ID: y
+Assignment: =
+ID: size
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['long', 'int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: n
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['long', 'int']
+Assignment: =
+ID: vest
+Cast: None
+Typename: None
+PtrDecl:
+TypeDecl: None
+IdentifierType: ['long', 'int']
+FuncCall:
+ID: malloc
+ExprList:
+BinaryOp: *
+ID: n
+UnaryOp: sizeof
+Typename: None
+TypeDecl: None
+IdentifierType: ['long', 'int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld"
+BinaryOp: +
+ID: size
+ID: i
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+FuncCall:
+ID: scanf
+ExprList:
+Constant: "%ld"
+BinaryOp: +
+ID: vest
+ID: i
+Decl: temp
+TypeDecl: temp
+IdentifierType: ['int']
+For:
+Assignment: =
+ID: i
+Constant: 0
+BinaryOp: <
+ID: i
+ID: n
+UnaryOp: p++
+ID: i
+Compound:
+For:
+Assignment: =
+ID: j
+Constant: 0
+BinaryOp: <
+ID: j
+ID: temp
+UnaryOp: p++
+ID: j
+Compound:
+If:
+BinaryOp: >
+UnaryOp: *
+BinaryOp: +
+ID: size
+ID: i
+BinaryOp: +
+UnaryOp: *
+BinaryOp: +
+ID: vest
+ID: j
+ID: y
+Compound:
+Break:
+If:
+BinaryOp: &&
+BinaryOp: <=
+UnaryOp: *
+BinaryOp: +
+ID: size
+ID: i
+BinaryOp: +
+UnaryOp: *
+BinaryOp: +
+ID: vest
+ID: j
+ID: y
+BinaryOp: >=
+UnaryOp: *
+BinaryOp: +
+ID: size
+ID: i
+BinaryOp: -
+UnaryOp: *
+BinaryOp: +
+ID: vest
+ID: j
+ID: x
+Compound:
+Assignment: =
+ID: temp
+BinaryOp: +
+ID: j
+Constant: 1
+UnaryOp: p++
+ID: p
+Break:
+FuncCall:
+ID: printf
+ExprList:
+Constant: "%d"
+ID: p
+Return:
+Constant: 0
