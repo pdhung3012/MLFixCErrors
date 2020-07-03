@@ -1,6 +1,6 @@
-fopPrutorCodes='/Users/hungphan/git/MLFixCErrors_data/Prutor Database Without Errors/'
-fopPreprocessCodes='/Users/hungphan/git/MLFixCErrors_data/PreprocessCodes/'
-fopASTInfos='/Users/hungphan/git/MLFixCErrors_data/ASTInfo/'
+fopPrutorCodes='/Users/hungphan/git/MLFixCErrors_data/TestCCodeInit/'
+fopPreprocessCodes='/Users/hungphan/git/MLFixCErrors_data/PreprocessCodes_Test/'
+fopASTInfos='/Users/hungphan/git/MLFixCErrors_data/ASTInfo_Test/'
 
 import os
 from pycparser import c_parser, c_ast
